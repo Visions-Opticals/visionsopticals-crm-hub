@@ -10,7 +10,7 @@
         <meta name="keywords" content="" />
         <meta name="author" content="Visacheck" />
     @show
-    <title>@section('head_title'){{ $page['title'] or 'vPanel' }} | {{ config('app.name') }}@show</title>
+    <title>@section('head_title'){{ $page['title'] ?? 'vPanel' }} | {{ config('app.name') }}@show</title>
     <!-- Favicons-->
     @include('layouts.blocks.favicons')
     <link rel="stylesheet" href="{{ cdn('apps/vpanel/css/bootstrap.min.css') }}">
@@ -49,7 +49,7 @@
                 @show
                 @section('body_content_main')
                     <div class="dash_content-inner">
-                        <div class="dash_content-title">{{ $title['title'] or '' }}</div>
+                        <div class="dash_content-title">{{ $title['title'] ?? '' }}</div>
                         <div class="dash_content">
                             @section('body_content_main_header')
                                 <header></header>
@@ -121,7 +121,7 @@
     new Vue({
         el: '#sidebar-nav',
         data: {
-            selectedMenu: '{{ $selectedMenu or '' }}',
+            selectedMenu: '{{ $selectedMenu ?? '' }}',
             partner: {!! json_encode(!empty($partner) ? $partner : []) !!},
             company: {!! json_encode(!empty($business) ? $business : []) !!},
             user: {!! json_encode(!empty($dorcasUser) ? $dorcasUser : []) !!},

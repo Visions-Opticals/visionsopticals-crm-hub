@@ -143,7 +143,8 @@ class ResolveCustomSubdomain
                     $view->with('partnerHubProductName', $hubConfig['product_name'] ?? $defaultProductName);
                     $view->with('isPartnerAdministrator', $isPartnerAdmin);
                     $scheme = app()->environment() === 'production' ? 'https' : 'http';
-                    $vPanelUrl = $scheme . '://' . $domain->prefix . '.' . $domain->domain['data']['domain'] . '/vpanel';
+                    //$vPanelUrl = $scheme . '://' . $domain->prefix . '.' . $domain->domain['data']['domain'] . '/vpanel';
+                    $vPanelUrl = generate_partner_url($partner, 'vpanel', ['token' => $sdk->getAuthorizationToken()]);
                     $view->with('vPanelUrl', $vPanelUrl);
                 }
             });
@@ -154,7 +155,6 @@ class ResolveCustomSubdomain
             # remove the domain from the session, if previously set
             $request->session()->remove('partner');
             # same for the partner
-            //dd("No Subdomain: ". $e->getMessage());
         }
         return $next($request);
     }

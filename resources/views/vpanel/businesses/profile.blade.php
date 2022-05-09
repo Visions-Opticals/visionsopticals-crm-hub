@@ -7,7 +7,7 @@
                 <div class="sub-title">
                     <a href="{{ route('vpanel.businesses') }}"><i class="ion-ios-arrow-back"></i> Back to Businesses</a>
                 </div>
-                <div class="title">{{ $header['title'] or 'Business Information' }}</div>
+                <div class="title">{{ $header['title'] ?? 'Business Information' }}</div>
             </div>
             <div class="reset"></div>
         </div>

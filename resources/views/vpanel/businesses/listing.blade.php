@@ -27,7 +27,7 @@
                    data-unique-id="id"
                    data-row-attributes="vpanel.formatters.companies"
                    data-response-handler="processCompanies"
-                   data-url="{{ route('xhr.vpanel.companies') }}?filters={{ $filters or '' }}"
+                   data-url="{{ route('xhr.vpanel.companies') }}?filters={{ $filters ?? '' }}"
                    id="tbl-companies-listing"
                    v-on:click="clicked($event)">
                 <thead>
@@ -143,7 +143,7 @@
                 companies: [],
                 company: {},
                 is_fetched: false,
-                mode: '{{ $listingMode or 'company' }}'
+                mode: "{{ $listingMode ?? 'company' }}"
             },
             methods: {
                 openInviteModal: function (mode) {

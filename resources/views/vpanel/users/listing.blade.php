@@ -27,7 +27,7 @@
                    data-unique-field="id"
                    data-row-attributes="vpanel.formatters.users"
                    data-response-handler="processUsers"
-                   data-url="{{ route('xhr.vpanel.users') }}?listing={{ $listing or '' }}"
+                   data-url="{{ route('xhr.vpanel.users') }}?listing={{ $listing ?? '' }}"
                    id="tbl-users-listing"
                    v-on:click="clicked($event)">
                 <thead>
@@ -133,7 +133,7 @@
                 users: [],
                 user: {},
                 is_fetched: false,
-                mode: '{{ $mode or 'members' }}'
+                mode: "{{ $mode ?? 'members' }}"
             },
             methods: {
                 openInviteModal: function (mode) {

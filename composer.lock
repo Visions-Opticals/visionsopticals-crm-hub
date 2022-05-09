@@ -8,6 +8,7 @@
     "packages": [
         {
             "name": "async-aws/core",
+<<<<<<< HEAD
             "version": "1.14.0",
             "source": {
                 "type": "git",
@@ -18,6 +19,18 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/async-aws/core/zipball/847996677e8f171ea799347294d7af899a6081ec",
                 "reference": "847996677e8f171ea799347294d7af899a6081ec",
+=======
+            "version": "1.13.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/async-aws/core.git",
+                "reference": "f604d0626cc235b249c3c9fb647334f4466d9f7d"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/async-aws/core/zipball/f604d0626cc235b249c3c9fb647334f4466d9f7d",
+                "reference": "f604d0626cc235b249c3c9fb647334f4466d9f7d",
+>>>>>>> b239fa3c59474f6f2b4715f6b2797ad8413cc084
                 "shasum": ""
             },
             "require": {
@@ -38,7 +51,11 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
+<<<<<<< HEAD
                     "dev-master": "1.14-dev"
+=======
+                    "dev-master": "1.13-dev"
+>>>>>>> b239fa3c59474f6f2b4715f6b2797ad8413cc084
                 }
             },
             "autoload": {
@@ -59,7 +76,11 @@
                 "sts"
             ],
             "support": {
+<<<<<<< HEAD
                 "source": "https://github.com/async-aws/core/tree/1.14.0"
+=======
+                "source": "https://github.com/async-aws/core/tree/1.13.0"
+>>>>>>> b239fa3c59474f6f2b4715f6b2797ad8413cc084
             },
             "funding": [
                 {
@@ -71,7 +92,11 @@
                     "type": "github"
                 }
             ],
+<<<<<<< HEAD
             "time": "2022-03-01T21:27:09+00:00"
+=======
+            "time": "2021-12-20T13:18:18+00:00"
+>>>>>>> b239fa3c59474f6f2b4715f6b2797ad8413cc084
         },
         {
             "name": "async-aws/lambda",
@@ -182,6 +207,7 @@
         },
         {
             "name": "aws/aws-sdk-php",
+<<<<<<< HEAD
             "version": "3.222.4",
             "source": {
                 "type": "git",
@@ -192,6 +218,18 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/a6ea9c9a93b35de272286f1de470eea637109415",
                 "reference": "a6ea9c9a93b35de272286f1de470eea637109415",
+=======
+            "version": "3.208.7",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/aws/aws-sdk-php.git",
+                "reference": "41a800dd7cf5c4ac0ef9bf8db01e838ab6a3698c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/41a800dd7cf5c4ac0ef9bf8db01e838ab6a3698c",
+                "reference": "41a800dd7cf5c4ac0ef9bf8db01e838ab6a3698c",
+>>>>>>> b239fa3c59474f6f2b4715f6b2797ad8413cc084
                 "shasum": ""
             },
             "require": {
@@ -267,9 +305,15 @@
             "support": {
                 "forum": "https://forums.aws.amazon.com/forum.jspa?forumID=80",
                 "issues": "https://github.com/aws/aws-sdk-php/issues",
+<<<<<<< HEAD
                 "source": "https://github.com/aws/aws-sdk-php/tree/3.222.4"
             },
             "time": "2022-05-03T21:08:50+00:00"
+=======
+                "source": "https://github.com/aws/aws-sdk-php/tree/3.208.7"
+            },
+            "time": "2021-12-21T19:16:39+00:00"
+>>>>>>> b239fa3c59474f6f2b4715f6b2797ad8413cc084
         },
         {
             "name": "barryvdh/laravel-dompdf",
@@ -339,6 +383,7 @@
         },
         {
             "name": "bref/bref",
+<<<<<<< HEAD
             "version": "1.5.5",
             "source": {
                 "type": "git",
@@ -349,6 +394,18 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/brefphp/bref/zipball/c3105172effa2f4cdd1fc33eb25af732a4948780",
                 "reference": "c3105172effa2f4cdd1fc33eb25af732a4948780",
+=======
+            "version": "1.4.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/brefphp/bref.git",
+                "reference": "c75867be52e65d3f54eec63c3c970956181d9bae"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/brefphp/bref/zipball/c75867be52e65d3f54eec63c3c970956181d9bae",
+                "reference": "c75867be52e65d3f54eec63c3c970956181d9bae",
+>>>>>>> b239fa3c59474f6f2b4715f6b2797ad8413cc084
                 "shasum": ""
             },
             "require": {
@@ -362,7 +419,10 @@
                 "psr/http-message": "^1.0",
                 "psr/http-server-handler": "^1.0",
                 "riverline/multipart-parser": "^2.0.6",
+<<<<<<< HEAD
                 "symfony/console": "^3.0|^4.0|^5.0|^6.0",
+=======
+>>>>>>> b239fa3c59474f6f2b4715f6b2797ad8413cc084
                 "symfony/filesystem": "^3.1|^4.0|^5.0|^6.0",
                 "symfony/http-client": "^4.4|^5.0|^6.0",
                 "symfony/process": "^4.2|^5.0|^6.0",
@@ -401,7 +461,11 @@
             ],
             "support": {
                 "issues": "https://github.com/brefphp/bref/issues",
+<<<<<<< HEAD
                 "source": "https://github.com/brefphp/bref/tree/1.5.5"
+=======
+                "source": "https://github.com/brefphp/bref/tree/1.4.1"
+>>>>>>> b239fa3c59474f6f2b4715f6b2797ad8413cc084
             },
             "funding": [
                 {
@@ -413,7 +477,11 @@
                     "type": "github"
                 }
             ],
+<<<<<<< HEAD
             "time": "2022-03-23T10:52:24+00:00"
+=======
+            "time": "2021-12-07T12:26:08+00:00"
+>>>>>>> b239fa3c59474f6f2b4715f6b2797ad8413cc084
         },
         {
             "name": "bref/laravel-bridge",
@@ -1326,10 +1394,16 @@
                 "reference": "57a5c03067c609061b42c22bf2052ca283e8bafa"
             },
             "dist": {
+<<<<<<< HEAD
                 "type": "zip",
                 "url": "https://api.github.com/repos/dorcas-io/modules-auth/zipball/57a5c03067c609061b42c22bf2052ca283e8bafa",
                 "reference": "57a5c03067c609061b42c22bf2052ca283e8bafa",
                 "shasum": ""
+=======
+                "type": "path",
+                "url": "/Users/ifeoluwa/Documents/Apps/DorcasFramework/Modules/modules-auth",
+                "reference": "57a5c03067c609061b42c22bf2052ca283e8bafa"
+>>>>>>> b239fa3c59474f6f2b4715f6b2797ad8413cc084
             },
             "require": {
                 "aws/aws-sdk-php": "^3.74",
@@ -1434,10 +1508,16 @@
                 "reference": "1af9a536ff20368c282456f9e88b4407e50944e2"
             },
             "dist": {
+<<<<<<< HEAD
                 "type": "zip",
                 "url": "https://api.github.com/repos/dorcas-io/modules-dashboard/zipball/1af9a536ff20368c282456f9e88b4407e50944e2",
                 "reference": "1af9a536ff20368c282456f9e88b4407e50944e2",
                 "shasum": ""
+=======
+                "type": "path",
+                "url": "/Users/ifeoluwa/Documents/Apps/DorcasFramework/Modules/modules-dashboard",
+                "reference": "1af9a536ff20368c282456f9e88b4407e50944e2"
+>>>>>>> b239fa3c59474f6f2b4715f6b2797ad8413cc084
             },
             "require": {
                 "aws/aws-sdk-php": "^3.74",
@@ -1482,10 +1562,17 @@
         {
             "name": "dorcas/modules-ecommerce",
             "version": "dev-master",
+<<<<<<< HEAD
             "source": {
                 "type": "git",
                 "url": "https://github.com/dorcas-io/modules-ecommerce.git",
                 "reference": "a0af5c2de95502dc18a426903c9594253d9e112b"
+=======
+            "dist": {
+                "type": "path",
+                "url": "/Users/ifeoluwa/Documents/Apps/DorcasFramework/Modules/modules-ecommerce",
+                "reference": "94072f358176584b8daa1505aa4b3c7688785f74"
+>>>>>>> b239fa3c59474f6f2b4715f6b2797ad8413cc084
             },
             "dist": {
                 "type": "zip",
@@ -3026,6 +3113,7 @@
         },
         {
             "name": "laravel/framework",
+<<<<<<< HEAD
             "version": "v6.20.44",
             "source": {
                 "type": "git",
@@ -3036,6 +3124,18 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/laravel/framework/zipball/505ebcdeaa9ca56d6d7dbf38ed4f53998c973ed0",
                 "reference": "505ebcdeaa9ca56d6d7dbf38ed4f53998c973ed0",
+=======
+            "version": "v6.20.43",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/laravel/framework.git",
+                "reference": "103df9fafbeeac620305874d54a01288c6f1586b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/laravel/framework/zipball/103df9fafbeeac620305874d54a01288c6f1586b",
+                "reference": "103df9fafbeeac620305874d54a01288c6f1586b",
+>>>>>>> b239fa3c59474f6f2b4715f6b2797ad8413cc084
                 "shasum": ""
             },
             "require": {
@@ -3175,7 +3275,11 @@
                 "issues": "https://github.com/laravel/framework/issues",
                 "source": "https://github.com/laravel/framework"
             },
+<<<<<<< HEAD
             "time": "2022-01-12T16:12:12+00:00"
+=======
+            "time": "2021-12-14T14:39:18+00:00"
+>>>>>>> b239fa3c59474f6f2b4715f6b2797ad8413cc084
         },
         {
             "name": "laravel/helpers",
@@ -3966,6 +4070,69 @@
             "time": "2016-08-11T17:49:21+00:00"
         },
         {
+<<<<<<< HEAD
+=======
+            "name": "mnapoli/silly",
+            "version": "1.7.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/mnapoli/silly.git",
+                "reference": "e437baa502c3e1691d342374e71446d4bac1cad5"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/mnapoli/silly/zipball/e437baa502c3e1691d342374e71446d4bac1cad5",
+                "reference": "e437baa502c3e1691d342374e71446d4bac1cad5",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.0",
+                "php-di/invoker": "~2.0",
+                "psr/container": "^1.0|^2.0",
+                "symfony/console": "~3.0|~4.0|~5.0"
+            },
+            "require-dev": {
+                "friendsofphp/php-cs-fixer": "^2.12",
+                "mnapoli/phpunit-easymock": "~1.0",
+                "phpunit/phpunit": "~6.4"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Silly\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "Silly CLI micro-framework based on Symfony Console",
+            "keywords": [
+                "PSR-11",
+                "cli",
+                "console",
+                "framework",
+                "micro-framework",
+                "silly"
+            ],
+            "support": {
+                "issues": "https://github.com/mnapoli/silly/issues",
+                "source": "https://github.com/mnapoli/silly/tree/1.7.3"
+            },
+            "funding": [
+                {
+                    "url": "https://github.com/mnapoli",
+                    "type": "github"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/mnapoli/silly",
+                    "type": "tidelift"
+                }
+            ],
+            "time": "2021-12-13T09:21:21+00:00"
+        },
+        {
+>>>>>>> b239fa3c59474f6f2b4715f6b2797ad8413cc084
             "name": "moneyphp/money",
             "version": "v3.3.1",
             "source": {
@@ -4267,6 +4434,7 @@
         },
         {
             "name": "nesbot/carbon",
+<<<<<<< HEAD
             "version": "2.58.0",
             "source": {
                 "type": "git",
@@ -4277,6 +4445,18 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/briannesbitt/Carbon/zipball/97a34af22bde8d0ac20ab34b29d7bfe360902055",
                 "reference": "97a34af22bde8d0ac20ab34b29d7bfe360902055",
+=======
+            "version": "2.55.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/briannesbitt/Carbon.git",
+                "reference": "8c2a18ce3e67c34efc1b29f64fe61304368259a2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/briannesbitt/Carbon/zipball/8c2a18ce3e67c34efc1b29f64fe61304368259a2",
+                "reference": "8c2a18ce3e67c34efc1b29f64fe61304368259a2",
+>>>>>>> b239fa3c59474f6f2b4715f6b2797ad8413cc084
                 "shasum": ""
             },
             "require": {
@@ -4360,7 +4540,11 @@
                     "type": "tidelift"
                 }
             ],
+<<<<<<< HEAD
             "time": "2022-04-25T19:31:17+00:00"
+=======
+            "time": "2021-12-03T14:59:52+00:00"
+>>>>>>> b239fa3c59474f6f2b4715f6b2797ad8413cc084
         },
         {
             "name": "nikic/php-parser",
@@ -4700,6 +4884,64 @@
             "time": "2021-10-18T02:13:32+00:00"
         },
         {
+<<<<<<< HEAD
+=======
+            "name": "php-di/invoker",
+            "version": "2.3.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/PHP-DI/Invoker.git",
+                "reference": "cd6d9f267d1a3474bdddf1be1da079f01b942786"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/PHP-DI/Invoker/zipball/cd6d9f267d1a3474bdddf1be1da079f01b942786",
+                "reference": "cd6d9f267d1a3474bdddf1be1da079f01b942786",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.3",
+                "psr/container": "^1.0|^2.0"
+            },
+            "require-dev": {
+                "athletic/athletic": "~0.1.8",
+                "mnapoli/hard-mode": "~0.3.0",
+                "phpunit/phpunit": "^9.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Invoker\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "Generic and extensible callable invoker",
+            "homepage": "https://github.com/PHP-DI/Invoker",
+            "keywords": [
+                "callable",
+                "dependency",
+                "dependency-injection",
+                "injection",
+                "invoke",
+                "invoker"
+            ],
+            "support": {
+                "issues": "https://github.com/PHP-DI/Invoker/issues",
+                "source": "https://github.com/PHP-DI/Invoker/tree/2.3.3"
+            },
+            "funding": [
+                {
+                    "url": "https://github.com/mnapoli",
+                    "type": "github"
+                }
+            ],
+            "time": "2021-12-13T09:22:56+00:00"
+        },
+        {
+>>>>>>> b239fa3c59474f6f2b4715f6b2797ad8413cc084
             "name": "php-http/message-factory",
             "version": "v1.0.2",
             "source": {
@@ -6466,6 +6708,7 @@
         },
         {
             "name": "symfony/http-client",
+<<<<<<< HEAD
             "version": "v5.4.8",
             "source": {
                 "type": "git",
@@ -6476,6 +6719,18 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/symfony/http-client/zipball/0dabec4e3898d3e00451dd47b5ef839168f9bbf5",
                 "reference": "0dabec4e3898d3e00451dd47b5ef839168f9bbf5",
+=======
+            "version": "v5.4.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/http-client.git",
+                "reference": "78b69fc4532253f3025db7f2429d8765e506cbf2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/http-client/zipball/78b69fc4532253f3025db7f2429d8765e506cbf2",
+                "reference": "78b69fc4532253f3025db7f2429d8765e506cbf2",
+>>>>>>> b239fa3c59474f6f2b4715f6b2797ad8413cc084
                 "shasum": ""
             },
             "require": {
@@ -6533,7 +6788,11 @@
             "description": "Provides powerful methods to fetch HTTP resources synchronously or asynchronously",
             "homepage": "https://symfony.com",
             "support": {
+<<<<<<< HEAD
                 "source": "https://github.com/symfony/http-client/tree/v5.4.8"
+=======
+                "source": "https://github.com/symfony/http-client/tree/v5.4.1"
+>>>>>>> b239fa3c59474f6f2b4715f6b2797ad8413cc084
             },
             "funding": [
                 {
@@ -6549,7 +6808,11 @@
                     "type": "tidelift"
                 }
             ],
+<<<<<<< HEAD
             "time": "2022-04-12T16:02:29+00:00"
+=======
+            "time": "2021-12-01T15:04:08+00:00"
+>>>>>>> b239fa3c59474f6f2b4715f6b2797ad8413cc084
         },
         {
             "name": "symfony/http-client-contracts",

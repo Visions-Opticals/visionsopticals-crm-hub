@@ -80,6 +80,9 @@
                                 </div>
                             </div>
                             <div class="row">
+                                <hr style="border-top: 2px solid #0e2949;" />
+                            </div>
+                            <div class="row">
                                 <div class="col-sm-12 col-md-4">
                                     <div class="form-group">
                                         <label>Invite Email Subject</label>
@@ -107,7 +110,7 @@
                                 <div class="col-sm-12 col-md-4">
                                     <div class="form-group">
                                         <label>Invite Email Footer</label>
-                                        <textarea type="text" class="form-control" id="email_footer" name="email_footer" v-model="inviteConfigFooter" rows="3">
+                                        <textarea type="text" class="form-control" id="email_footer" name="email_footer" v-model="inviteConfigFooter" rows="5">
                                         </textarea>
                                         @if ($errors->has('email_footer'))
                                             <span class="text-danger">
@@ -117,7 +120,65 @@
                                     </div>
                                 </div>
                             </div>
-                            <button type="submit" class="btn btn-default btn-default-type">Save Settings</button>
+
+
+                            <div class="row">
+                                <hr style="border-top: 2px solid #0e2949;" />
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-12 col-md-4">
+                                    <div class="form-group">
+                                        <label>Enable Global Marketplace</label>
+                                        <select class="form-control" name="marketplace_global_enable" id="marketplace_global_enable" v-model="marketplaceConfig.global_enable" required>
+                                            <option value="">Select</option>
+                                            <option value="1">Yes</option>
+                                            <option value="0">No</option>
+                                        </select>
+                                        @if ($errors->has('marketplace_global_enable'))
+                                            <span class="text-danger">
+                                                <strong>{{ $errors->first('marketplace_global_enable') }}</strong>
+                                            </span>
+                                        @endif
+                                    </div>
+                                </div>
+                                <div class="col-sm-12 col-md-4">
+                                    <div class="form-group">
+                                        <label>Manage Product Categories</label>
+                                        <select class="form-control" name="marketplace_sales_categories[]" id="marketplace_sales_categories" multiple>
+                                            <option disabled="">Leave Unselected. Select / ReSelect to UPDATE</option>
+                                            <option v-for="category in marketplaceConfig.sales_categories" v-bind:value="category">@{{ category }}</option>
+                                        </select>
+                                        <p><b><a href="#" v-on:click.prevent="addCategory">Click to ADD PRODUCT CATEGORIES</a></b> (remember to Save Customisations)</p>
+                                        @if ($errors->has('marketplace_sales_categories'))
+                                            <span class="text-danger">
+                                                <strong>{{ $errors->first('marketplace_sales_categories') }}</strong>
+                                            </span>
+                                        @endif
+                                    </div>
+                                </div>
+                                <div class="col-sm-12 col-md-4">
+                                    <div class="form-group">
+                                        <label>Manage Service Categories</label>
+                                        <select class="form-control" name="marketplace_service_categories[]" id="marketplace_service_categories" multiple>
+                                            <option disabled="">Leave Unselected. Select / ReSelect to UPDATE</option>
+                                            <option v-for="category in marketplaceConfig.service_categories" v-bind:value="category">@{{ category }}</option>
+                                        </select>
+                                        <p><b><a href="#" v-on:click.prevent="addServiceCategory">Click to ADD SERVICE CATEGORIES</a></b> (remember to Save Customisations)</p>
+                                        @if ($errors->has('marketplace_service_categories'))
+                                            <span class="text-danger">
+                                                <strong>{{ $errors->first('marketplace_service_categories') }}</strong>
+                                            </span>
+                                        @endif
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="row" style="text-align:right">
+                                <hr style="border-top: 2px solid #0e2949;" />
+                                <button type="submit" class="btn btn-default btn-default-type">Save Customisations</button>
+                            </div>
+                            
                         </div>
                     </form>
                 </div>
@@ -370,7 +431,6 @@ function htmlspecialchars_decode(string, quote_style) {
     return tmp_str;  
 } 
 
-
         new Vue({
             el: '#settings-box',
             data: {
@@ -380,7 +440,64 @@ function htmlspecialchars_decode(string, quote_style) {
                 inviteConfig: {},
                 inviteConfigBody: '',
                 inviteConfigFooter: '',
-                loading: false
+                loading: false,
+                marketplaceConfig: {
+                    global_enable: 1,
+                    sales_categories: [],
+                    service_categories: []
+                }
+            },
+            methods: {
+                addCategory: function () {
+                    Swal.fire({
+                        title: 'New Product Category',
+                        text: "Enter the name for the category:",
+                        input: "text",
+                        inputAttributes: {
+                            autocapitalize: 'off'
+                        },
+                        showCancelButton: true,
+                        confirmButtonText: 'Save',
+                        animation: "slide-from-top",
+                        showLoaderOnConfirm: true,
+                        inputPlaceholder: "e.g. Clothing",
+                        inputValidator: (value) => {
+                            if (!value) {
+                                return 'You need to write something!'
+                            }
+                        },
+                        preConfirm: (value) => {
+                            this.marketplaceConfig.sales_categories.push(value);
+                            return true;
+                            //return swal("Success", "The item <b>" + value + "</b> was successfully added to Global eCommerce Product Categories<br><br><em>Remember to Save Customisations</em>", "success");
+                        }
+                    });
+                },
+                addServiceCategory: function () {
+                    Swal.fire({
+                        title: 'New Service Category',
+                        text: "Enter the name for the category:",
+                        input: "text",
+                        inputAttributes: {
+                            autocapitalize: 'off'
+                        },
+                        showCancelButton: true,
+                        confirmButtonText: 'Save',
+                        animation: "slide-from-top",
+                        showLoaderOnConfirm: true,
+                        inputPlaceholder: "e.g. HR",
+                        inputValidator: (value) => {
+                            if (!value) {
+                                return 'You need to write something!'
+                            }
+                        },
+                        preConfirm: (value) => {
+                            this.marketplaceConfig.service_categories.push(value);
+                            return true;
+                            //return swal("Success", "The item <b>" + value + "</b> was successfully added to Global eCommerce Product Categories<br><br><em>Remember to Save Customisations</em>", "success");
+                        }
+                    });
+                }
             },
             mounted: function () {
                 if (typeof this.partner.extra_data.hubConfig !== 'undefined') {
@@ -390,6 +507,9 @@ function htmlspecialchars_decode(string, quote_style) {
                     this.inviteConfig = this.partner.extra_data.inviteConfig;
                     this.inviteConfigBody = htmlspecialchars_decode(this.inviteConfig.email_body, 'ENT_QUOTES')
                     this.inviteConfigFooter = htmlspecialchars_decode(this.inviteConfig.email_footer, 'ENT_QUOTES')
+                }
+                if (typeof this.partner.extra_data.marketplaceConfig !== 'undefined') {
+                    this.marketplaceConfig = this.partner.extra_data.marketplaceConfig;
                 }
             },
             computed: {

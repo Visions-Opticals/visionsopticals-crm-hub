@@ -58,20 +58,25 @@ class Customisation extends Controller
             if (empty($partner)) {
                 throw new \RuntimeException('Errors occurred while resolving your partner account.');
             }
+
             $resource = $sdk->createPartnerResource($partner->id)->addBodyParam('name', $request->input('name'));
+            
             if ($request->has('logo')) {
                 $file = $request->file('logo');
                 $resource->addMultipartParam('logo', file_get_contents($file->getRealPath(), false), $file->getClientOriginalName());
             }
+
             if ($request->has('product_name')) {
                 $extraConfig['hubConfig']['product_name'] = $request->input('product_name');
             }
+
             if ($request->has('support_email')) {
                 $extraConfig['support_email'] = $request->input('support_email');
             }
-            if ($request->has('video_url')) {
+
+            if ($request->has('video_url') && !empty($request->input('video_url'))) {
                 # let's try to get the youtube ID
-                if (!str_contains($request->input('video_url'), ['youtube.com', 'youtu.be'])) {
+                if (!str_contains($request->input('video_url'), 'youtu.be') && !str_contains($request->input('video_url'), 'youtube.com')) {
                     throw new \RuntimeException('Invalid Youtube URL provided.');
                 }
                 $prepend = !starts_with($request->input('video_url'), 'http') ? 'https://' : '';
@@ -85,13 +90,9 @@ class Customisation extends Controller
                     parse_str($uri->getQuery(), $query);
                     $extraConfig['welcome_video_id'] = $query['v'] ?? '';
                 }
-                //$resource->addBodyParam('extra_data', $extraConfig);
             }
 
             //save invite email data
-
-
-
             if ($request->has('email_subject')) {
                 $extraConfig['inviteConfig']['email_subject'] = $request->input('email_subject');
             }
@@ -101,6 +102,20 @@ class Customisation extends Controller
             if ($request->has('email_footer')) {
                 $extraConfig['inviteConfig']['email_footer'] = $this->clean_json_input($request->input('email_footer'));
             }
+
+            //save marketplace config
+            if ($request->has('marketplace_global_enable')) {
+                $extraConfig['marketplaceConfig']['global_enable'] = $request->input('marketplace_global_enable');
+            }
+            
+            if ($request->has('marketplace_sales_categories')) {
+                $extraConfig['marketplaceConfig']['sales_categories'] = $request->input('marketplace_sales_categories');
+            }
+            
+            if ($request->has('marketplace_service_categories')) {
+                $extraConfig['marketplaceConfig']['service_categories'] = $request->input('marketplace_service_categories');
+            }
+
 
             $resource->addBodyParam('extra_data', $extraConfig);
             $query = $resource->send('post');

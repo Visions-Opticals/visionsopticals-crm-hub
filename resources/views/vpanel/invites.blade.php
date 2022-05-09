@@ -26,7 +26,7 @@
                    data-unique-id="id"
                    data-row-attributes="vpanel.formatters.invites"
                    data-response-handler="processInvites"
-                   data-url="{{ route('xhr.vpanel.invites') }}?filters={{ $filters or '' }}"
+                   data-url="{{ route('xhr.vpanel.invites') }}?filters={{ $filters ?? '' }}"
                    id="tbl-invites-listing"
                    v-on:click="clicked($event)">
                 <thead>

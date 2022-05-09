@@ -1,7 +1,7 @@
 <div class="extras hidden">
     <div class="modal-photo-form-spec">
         <header>
-            <span class="text" id="modal-title">{{ $modalTitle or 'Upload a Photo' }}</span>
+            <span class="text" id="modal-title">{{ $modalTitle ?? 'Upload a Photo' }}</span>
         </header>
         <form action="" method="post" enctype="multipart/form-data">
             @csrf
@@ -40,7 +40,7 @@
                 </div>
             </div>
             <div class="spec-actions text-right">
-                <button type="submit" class="btn btn-default-type btn-success --place-booking">{{ $buttonText or 'Upload Photo' }}</button>
+                <button type="submit" class="btn btn-default-type btn-success --place-booking">{{ $buttonText ?? 'Upload Photo' }}</button>
             </div>
         </form>
     </div>
