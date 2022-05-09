@@ -1100,7 +1100,7 @@
             "dist": {
                 "type": "path",
                 "url": "/Users/ifeoluwa/Documents/Apps/DorcasFramework/Modules/laravel-compat",
-                "reference": "8f917875810d1c803f2696c1a1943696c7dc23d0"
+                "reference": "17629dda594b85c6b687b86a13730e3ca89ffaec"
             },
             "require": {
                 "dorcas/sdk-php-laravel": "dev-master",
@@ -1156,7 +1156,7 @@
             "dist": {
                 "type": "path",
                 "url": "/Users/ifeoluwa/Documents/Apps/DorcasFramework/Modules/modules-access-requests",
-                "reference": "775e1379e17f659e2081263636f0815566fbf3e1"
+                "reference": "41ac1ab66c4daf891321ffde4e7c1d41a8813e66"
             },
             "require": {
                 "aws/aws-sdk-php": "^3.74",
@@ -1200,7 +1200,7 @@
             "dist": {
                 "type": "path",
                 "url": "/Users/ifeoluwa/Documents/Apps/DorcasFramework/Modules/modules-app-store",
-                "reference": "bf2a9cb683574143068ebdf328d1e8ebe96e627e"
+                "reference": "d7ad785333d84c59b62b91ff95343eb409ae1da6"
             },
             "require": {
                 "aws/aws-sdk-php": "^3.74",
@@ -1244,7 +1244,7 @@
             "dist": {
                 "type": "path",
                 "url": "/Users/ifeoluwa/Documents/Apps/DorcasFramework/Modules/modules-assistant",
-                "reference": "64a62607e3f8d934aedc38e2cea2cabef56c0a39"
+                "reference": "b0f694727f9548d056ef4248a5e93db1a5840b14"
             },
             "require": {
                 "aws/aws-sdk-php": "^3.74",
@@ -1288,7 +1288,7 @@
             "dist": {
                 "type": "path",
                 "url": "/Users/ifeoluwa/Documents/Apps/DorcasFramework/Modules/modules-auth",
-                "reference": "57a5c03067c609061b42c22bf2052ca283e8bafa"
+                "reference": "7778561f95d3166dca345a9ec5c1f6ef04bb726f"
             },
             "require": {
                 "aws/aws-sdk-php": "^3.74",
@@ -1332,7 +1332,7 @@
             "dist": {
                 "type": "path",
                 "url": "/Users/ifeoluwa/Documents/Apps/DorcasFramework/Modules/modules-customers",
-                "reference": "e8d01141dd66bad6bc3b8e11c0e468c7cea8fdce"
+                "reference": "55ac6effa5ecf69e0821edf55853ebc3dab13cc4"
             },
             "require": {
                 "aws/aws-sdk-php": "^3.74",
@@ -1376,7 +1376,7 @@
             "dist": {
                 "type": "path",
                 "url": "/Users/ifeoluwa/Documents/Apps/DorcasFramework/Modules/modules-dashboard",
-                "reference": "1af9a536ff20368c282456f9e88b4407e50944e2"
+                "reference": "86711784d1b94f102a73b68abb70e181f7a3b0c7"
             },
             "require": {
                 "aws/aws-sdk-php": "^3.74",
@@ -1420,7 +1420,7 @@
             "dist": {
                 "type": "path",
                 "url": "/Users/ifeoluwa/Documents/Apps/DorcasFramework/Modules/modules-ecommerce",
-                "reference": "94072f358176584b8daa1505aa4b3c7688785f74"
+                "reference": "853970a8f2da518894548cd5123cf0cf4e911087"
             },
             "require": {
                 "aws/aws-sdk-php": "^3.74",
@@ -1464,7 +1464,7 @@
             "dist": {
                 "type": "path",
                 "url": "/Users/ifeoluwa/Documents/Apps/DorcasFramework/Modules/modules-finance",
-                "reference": "c66eaa39f265404a25499ae0612b06aa0ceaaf72"
+                "reference": "f8ac32d4cdd75d7e3177f5c2ddbbd202dbe4d407"
             },
             "require": {
                 "aws/aws-sdk-php": "^3.74",
@@ -1508,7 +1508,7 @@
             "dist": {
                 "type": "path",
                 "url": "/Users/ifeoluwa/Documents/Apps/DorcasFramework/Modules/modules-finance-tax",
-                "reference": "bbd6b18e83fd2fa77f90888dbb3a3f53f619e335"
+                "reference": "aff9d9c2aa23985edda4a88e16444540c88ad22d"
             },
             "require": {
                 "aws/aws-sdk-php": "^3.74",
@@ -1552,7 +1552,7 @@
             "dist": {
                 "type": "path",
                 "url": "/Users/ifeoluwa/Documents/Apps/DorcasFramework/Modules/modules-integrations",
-                "reference": "efd1a6332f97ce0420cca6f83b95c1f24383de2c"
+                "reference": "610393c6946260f63b0a1117fa5b32b1ce437f85"
             },
             "require": {
                 "aws/aws-sdk-php": "^3.74",
@@ -1596,7 +1596,7 @@
             "dist": {
                 "type": "path",
                 "url": "/Users/ifeoluwa/Documents/Apps/DorcasFramework/Modules/modules-library",
-                "reference": "a8a6929c87a11eaa6f25423e9f614a93abcc565e"
+                "reference": "35a7270023f09b7333f4afc321451f38c0ead402"
             },
             "require": {
                 "aws/aws-sdk-php": "^3.74",
@@ -1640,7 +1640,7 @@
             "dist": {
                 "type": "path",
                 "url": "/Users/ifeoluwa/Documents/Apps/DorcasFramework/Modules/modules-marketplace",
-                "reference": "743d761962c48f196c54c3add3071326a2beaba0"
+                "reference": "b0fac4041be3778aae28c2f4466bfb3edf430a3c"
             },
             "require": {
                 "aws/aws-sdk-php": "^3.74",
@@ -1684,7 +1684,7 @@
             "dist": {
                 "type": "path",
                 "url": "/Users/ifeoluwa/Documents/Apps/DorcasFramework/Modules/modules-people",
-                "reference": "080ab6e6fc8a50ea9b752481d7fa40e482327fee"
+                "reference": "23071ee3ca57ea56b2a55dc92fe5d844699e0d32"
             },
             "require": {
                 "aws/aws-sdk-php": "^3.74",
@@ -1728,7 +1728,7 @@
             "dist": {
                 "type": "path",
                 "url": "/Users/ifeoluwa/Documents/Apps/DorcasFramework/Modules/modules-people-payroll",
-                "reference": "52ed85baf0b3c37d593b6beb66c78ccc9db88851"
+                "reference": "c4fe1f079805f6b7a881475142c03acd77dca949"
             },
             "require": {
                 "aws/aws-sdk-php": "^3.74",
@@ -1783,7 +1783,7 @@
             "dist": {
                 "type": "path",
                 "url": "/Users/ifeoluwa/Documents/Apps/DorcasFramework/Modules/modules-sales",
-                "reference": "d3fb34c4f15f0f736f2439c784209921f837d573"
+                "reference": "54f25ea8548c456ef66d35e242482ae2decb5779"
             },
             "require": {
                 "aws/aws-sdk-php": "^3.74",
@@ -1827,7 +1827,7 @@
             "dist": {
                 "type": "path",
                 "url": "/Users/ifeoluwa/Documents/Apps/DorcasFramework/Modules/modules-service-profile",
-                "reference": "90c43dd555ae6df37527f3b7f676fa3f73b9ab56"
+                "reference": "bfd25829cd947f9f7139152d42a8c93e2934038c"
             },
             "require": {
                 "aws/aws-sdk-php": "^3.74",
@@ -1871,7 +1871,7 @@
             "dist": {
                 "type": "path",
                 "url": "/Users/ifeoluwa/Documents/Apps/DorcasFramework/Modules/modules-service-requests",
-                "reference": "ab0b621dbc0dcf439f4a3b5fcc39505a675c7ece"
+                "reference": "a117f83b32b189107843500a87d5145d7359c4b2"
             },
             "require": {
                 "aws/aws-sdk-php": "^3.74",
@@ -1915,7 +1915,7 @@
             "dist": {
                 "type": "path",
                 "url": "/Users/ifeoluwa/Documents/Apps/DorcasFramework/Modules/modules-settings",
-                "reference": "44cd11cbacd7c06c9aff8a068bd392d85fc0a56d"
+                "reference": "1bff7ac2bbd8b5d50c993c441dfc3e841cacf6e0"
             },
             "require": {
                 "aws/aws-sdk-php": "^3.74",
@@ -1959,7 +1959,7 @@
             "dist": {
                 "type": "path",
                 "url": "/Users/ifeoluwa/Documents/Apps/DorcasFramework/Modules/resellerclub-php",
-                "reference": "f8912b3d32781391208ad02fcbcbd48796006689"
+                "reference": "0d8746455821c60f2c0b041c28934d640ff2ba00"
             },
             "require": {
                 "guzzlehttp/guzzle": "~6"
@@ -1990,7 +1990,7 @@
             "dist": {
                 "type": "path",
                 "url": "/Users/ifeoluwa/Documents/Apps/DorcasFramework/Modules/sdk-php-laravel",
-                "reference": "fd2a2053c7cbd86b32da6bfe26867b543140d646"
+                "reference": "44180c74900c80c099c61aed29b29a2b647c1b2d"
             },
             "require": {
                 "ext-json": "*",
@@ -2498,16 +2498,16 @@
         },
         {
             "name": "guzzlehttp/psr7",
-            "version": "1.8.3",
+            "version": "1.8.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/guzzle/psr7.git",
-                "reference": "1afdd860a2566ed3c2b0b4a3de6e23434a79ec85"
+                "reference": "337e3ad8e5716c15f9657bd214d16cc5e69df268"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/guzzle/psr7/zipball/1afdd860a2566ed3c2b0b4a3de6e23434a79ec85",
-                "reference": "1afdd860a2566ed3c2b0b4a3de6e23434a79ec85",
+                "url": "https://api.github.com/repos/guzzle/psr7/zipball/337e3ad8e5716c15f9657bd214d16cc5e69df268",
+                "reference": "337e3ad8e5716c15f9657bd214d16cc5e69df268",
                 "shasum": ""
             },
             "require": {
@@ -2532,12 +2532,12 @@
                 }
             },
             "autoload": {
-                "psr-4": {
-                    "GuzzleHttp\\Psr7\\": "src/"
-                },
                 "files": [
                     "src/functions_include.php"
-                ]
+                ],
+                "psr-4": {
+                    "GuzzleHttp\\Psr7\\": "src/"
+                }
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
@@ -2588,7 +2588,7 @@
             ],
             "support": {
                 "issues": "https://github.com/guzzle/psr7/issues",
-                "source": "https://github.com/guzzle/psr7/tree/1.8.3"
+                "source": "https://github.com/guzzle/psr7/tree/1.8.5"
             },
             "funding": [
                 {
@@ -2604,7 +2604,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2021-10-05T13:56:00+00:00"
+            "time": "2022-03-20T21:51:18+00:00"
         },
         {
             "name": "hollodotme/fast-cgi-client",
@@ -10275,5 +10275,5 @@
         "ext-json": "*"
     },
     "platform-dev": [],
-    "plugin-api-version": "2.0.0"
+    "plugin-api-version": "2.3.0"
 }
