@@ -19,6 +19,16 @@ $request = app()->make('request');
 $currentHost = $request->header('host');
 $defaultUri = new Uri(config('app.url'));
 
+Route::get('/check-db', function () {
+    try {
+        DB::connection()->getPdo();
+        return "Connected successfully to: " . DB::connection()->getDatabaseName();
+    } catch (\Exception $e) {
+        die("Could not connect to the database. Please check your configuration. error:" . $e );
+    }
+
+});
+
 Route::get('/', 'Index@index');
 Route::get('/index-business', 'Index@indexBusiness')->name('index-business');
 Route::get('/index-community', 'Index@indexCommunity')->name('index-community');
