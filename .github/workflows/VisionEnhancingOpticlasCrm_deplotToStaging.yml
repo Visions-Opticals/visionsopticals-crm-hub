@@ -12,7 +12,7 @@ jobs:
         with:
           aws-access-key-id:  ${{ secrets.AWS_ACCESS_KEY }}
           aws-secret-access-key: ${{ secrets.AWS_ACCESS_SECRET }}
-          aws-region:  ${{secrets.AWS_REGION}}
+          aws-region:  'eu-west-1'
           aws-security-group-id: ${{secrets.AWS_SG}}
           protocol: 'tcp'
           description: 'GitHub Action Access (Staging)'
@@ -27,7 +27,7 @@ jobs:
             sudo rm -rf ${{ secrets.PATH }}/*
             sudo mkdir ${{secrets.PATH}}
             sudo chown -R $USER:www-data  ${{secrets.PATH}}
-      - name: Copy EOSBackend Files
+      - name: Copy VisionOpticalBackend Files
         uses: appleboy/scp-action@master
         with:
           host:  ${{secrets.HOST}}
