@@ -10,7 +10,7 @@ jobs:
       - name: Add public IP to AWS security group
         uses: sohelamin/aws-security-group-add-ip-action@master
         with:
-          aws-access-key-id:  ${{ secrets.AWS_ACCESS_KEY }}
+          aws-access-key-id: 'AKIAT4JHVB4A3MOHQZ7Q'
           aws-secret-access-key: ${{ secrets.AWS_ACCESS_SECRET }}
           aws-region:  'eu-west-1'
           aws-security-group-id: ${{secrets.AWS_SG}}
