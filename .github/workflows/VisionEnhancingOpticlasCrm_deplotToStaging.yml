@@ -1,0 +1,124 @@
+name: EOSBackend_DeployToStaging
+on:
+  push:
+    branches: [ dev-ola ]
+jobs:
+  deploy-eos-to-ec2:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@master
+      - name: Add public IP to AWS security group
+        uses: sohelamin/aws-security-group-add-ip-action@master
+        with:
+          aws-access-key-id:  ${{ secrets.AWS_ACCESS_KEY }}
+          aws-secret-access-key: ${{ secrets.AWS_ACCESS_SECRET }}
+          aws-region:  ${{secrets.AWS_REGION}}
+          aws-security-group-id: ${{secrets.AWS_SG}}
+          protocol: 'tcp'
+          description: 'GitHub Action Access (Staging)'
+      - name: Clear Out EOSBackend Directory
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{secrets.HOST}}
+          username: ${{secrets.USER}}
+          key: ${{ secrets.KEY }}
+          port: ${{secrets.PORT}}
+          script: |
+            sudo rm -rf ${{ secrets.PATH }}/*
+            sudo mkdir ${{secrets.PATH}}
+            sudo chown -R $USER:www-data  ${{secrets.PATH}}
+      - name: Copy EOSBackend Files
+        uses: appleboy/scp-action@master
+        with:
+          host:  ${{secrets.HOST}}
+          username: ${{secrets.USER}}
+          key: ${{ secrets.KEY }}
+          port: ${{secrets.PORT}}
+          overwrite: true
+          source: "./*"
+          target: ${{ secrets.PATH }}
+          tar_tmp_path: "/var/www/github-tmp"
+      - name: Setup and Configure Laravel Installation
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{secrets.HOST}}
+          username: ${{secrets.USER}}
+          key:  ${{ secrets.KEY }}
+          port: ${{secrets.PORT}}
+          script: |
+            cd ${{ secrets.PATH }}/
+            touch .env
+
+            # Dorcas Hub (Business) ENV
+
+            INSTALLED_HUB=false
+
+            # Base Laravel Settings
+            echo   APP_NAME=DorcasHubBase >> .env
+            echo   APP_ENV=local >> .env
+            echo   APP_KEY=base64:MCwov2dPKeHqY28kzhntI3by1Hiie0/jVV7iSMtUrVM= >> .env
+            echo   APP_DEBUG=true >> .env
+            echo   APP_LOG_LEVEL=debug >> .env
+
+            echo APP_URL=https://crm.visionenhancingsolutions.app >> .env
+            echo APP_URL_STATIC=https://crm.visionenhancingsolutions.app >> .env
+            echo ASSET_URL=https://crm.visionenhancingsolutions.app >> .env
+
+
+            # Base Dorcas Settings
+            echo  DORCAS_EDITION=community >> .env
+            echo  SDK_HOST_PRODUCTION=https://core-crm.visionenhancingsolutions.app  >> .env
+            echo  DEPLOY_ENV=local >> .env
+            echo  DORCAS_CURL_SSL_VERIFY=false >> .env
+            echo   STANDARD_HOST=hub-base.test >> .env
+            echo  DORCAS_BASE_URL=https://core-crm.visionenhancingsolutions.app >> .env
+            echo  DORCAS_BASE_DOMAIN=core-crm.visionenhancingsolutions.app >> .env
+
+            echo   DORCAS_CLIENT_ID=1 >> .env
+            echo  DORCAS_CLIENT_SECRET=fWEzQI0VrwthPaKPM4rHp8nNthHARkzDnxW1L4a2 >> .env
+            echo  DORCAS_PERSONAL_CLIENT_ID=1 >> .env
+            echo  DORCAS_PERSONAL_CLIENT_SECRET=fWEzQI0VrwthPaKPM4rHp8nNthHARkzDnxW1L4a2 >> .env
+            echo  DORCAS_STORE_PAYMENT_VENDOR_URL="https://dorcas.ravepay.co/auth/" >> .env
+
+            echo  DORCAS_PARTNER_NAME = "Sample Community" >> .env
+            echo  DORCAS_PARTNER_SLUG = "community" >> .env
+            echo DORCAS_PARTNER_LOGO = "https://dorcas-s3.s3.eu-west-1.amazonaws.com/images/logo_main.png" >> .env
+            echo  DORCAS_PARENT_DOMAIN = "crm.visionenhancingsolutions.app" >> .env
+
+            # Database Settings
+            echo  DB_CONNECTION=mysql >> .env
+            echo  DB_HOST=localhost >> .env
+            echo  DB_PORT=3306 >> .env
+            echo DB_DATABASE=${{secrets.DB_HOST}} >> .env
+            echo  DB_USERNAME=${{secrets.DB_USER}} >> .env
+            echo  DB_PASSWORD=${{secrets.DB_PASSWORD}} >> .env
+            echo  DB_CORE_HOST=localhost >> .env
+            echo  DB_CORE_PORT=3306 >> .env
+
+            echo  DB_CORE_DATABASE=${{secrets.DB_HOST}} >> .env
+            echo  DB_CORE_USERNAME=${{secrets.DB_USER}} >> .env
+            echo  DB_CORE_PASSWORD=${{secrets.DB_PASSWORD}} >> .env
+
+            # Other Laravel Settings
+            echo SESSION_DRIVER=file >> .env
+            echo  CACHE_DRIVER=file >> .env
+            echo  FILESYSTEM_DRIVER=public >> .env
+
+            set -e
+
+            echo "Deployment started ..."
+
+            composer update
+
+            php artisan optimize:clear
+
+            sudo chown -R $USER:www-data ${{ secrets.PATH }}/storage
+            sudo chown -R $USER:www-data ${{ secrets.PATH }}/bootstrap/cache
+
+            sudo chmod -R 775 ${{ secrets.PATH }}/storage
+            sudo chmod -R 775 ${{ secrets.PATH }}/bootstrap/cache
+            sudo chmod -R u=rwx,g=rwx,o=rw ${{ secrets.PATH }}/storage/logs
+
+            sudo chmod u=rwx,g=rx,o=x ${{secrets.PATH}}/artisan
+
+            echo "Deployment finished!"

@@ -4,12 +4,6 @@
     "keywords": ["framework", "laravel", "dorcas"],
     "license": "MIT",
     "type": "project",
-    "repositories": [
-        {
-          "type": "path",
-          "url": "/Users/ifeoluwa/Documents/Apps/DorcasFramework/Modules/*",
-          "symlink": true
-        }],
     "require": {
         "php": ">=7.2",
         "ext-json": "*",
