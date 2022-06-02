@@ -13,7 +13,7 @@ jobs:
           aws-access-key-id: ${{secrets.AWS_ACCESS_KEY}}
           aws-secret-access-key: ${{secrets.AWS_ACCESS_SECRET}}
           aws-region:  ${{secrets.AWS_REGION}}
-          aws-security-group-id: ${{secrets.VM_SG}}
+          aws-security-group-id: ${{secrets.AWS_SG}}
           protocol: 'tcp'
           description: 'GitHub Action Access (Staging)'
       - name: Clear Out VisionOpticalCRMHub Directory
