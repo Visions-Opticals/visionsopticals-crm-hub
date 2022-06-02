@@ -8,7 +8,6 @@
     "packages": [
         {
             "name": "async-aws/core",
-<<<<<<< HEAD
             "version": "1.14.0",
             "source": {
                 "type": "git",
@@ -19,18 +18,6 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/async-aws/core/zipball/847996677e8f171ea799347294d7af899a6081ec",
                 "reference": "847996677e8f171ea799347294d7af899a6081ec",
-=======
-            "version": "1.13.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/async-aws/core.git",
-                "reference": "f604d0626cc235b249c3c9fb647334f4466d9f7d"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/async-aws/core/zipball/f604d0626cc235b249c3c9fb647334f4466d9f7d",
-                "reference": "f604d0626cc235b249c3c9fb647334f4466d9f7d",
->>>>>>> b239fa3c59474f6f2b4715f6b2797ad8413cc084
                 "shasum": ""
             },
             "require": {
