@@ -69,17 +69,19 @@ jobs:
             echo "Deployment started ..."
 
 
-            composer update 
+            composer update
 
             php artisan optimize:clear
 
-            sudo chown -R $USER:www-data ${{ secrets.PATH }}/storage
-            sudo chown -R $USER:www-data ${{ secrets.PATH }}/bootstrap/cache
-
-            sudo chmod -R 775 ${{ secrets.PATH }}/storage
+            sudo chown -R $USER:www-data ${{ secrets.PATH }}/storage/
+            sudo chown -R $USER:www-data ${{ secrets.PATH}}/bootstrap/cache
+            sudo chmod -R 775 ${{ secrets.PATH }}/storage/
             sudo chmod -R 775 ${{ secrets.PATH }}/bootstrap/cache
             sudo chmod -R u=rwx,g=rwx,o=rw ${{ secrets.PATH }}/storage/logs
-
-            sudo chmod u=rwx,g=rx,o=x ${{secrets.PATH}}/artisan
+            touch ${{ secrets.PATH }}/storage/logs/laravel.log && > ${{ secrets.PATH }}/storage/logs/laravel.log
+            sudo chown $USER:www-data ${{ secrets.PATH}}/storage/logs/laravel.log
+            sudo chmod u=rwx,g=rw,o=rw ${{ secrets.PATH}}/storage/logs/laravel.log
+            sudo chmod u=rwx,g=rx,o=x ${{ secrets.PATH }}/artisan
+            find "${{ secrets.PATH }}" -type f -name '*.php' -exec chmod 644 {} \;
 
             echo "Deployment finished!"
