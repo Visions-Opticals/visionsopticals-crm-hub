@@ -1,4 +1,4 @@
-name: EOSBackend_DeployToStaging
+name: VisionOpticalCRMBackend_DeployToStaging
 on:
   push:
     branches: [ dev-ola ]
