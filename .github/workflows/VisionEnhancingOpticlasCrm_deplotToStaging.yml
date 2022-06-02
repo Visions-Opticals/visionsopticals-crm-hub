@@ -11,9 +11,9 @@ jobs:
         uses: sohelamin/aws-security-group-add-ip-action@master
         with:
           aws-access-key-id: 'AKIAT4JHVB4A3MOHQZ7Q'
-          aws-secret-access-key: ${{ secrets.AWS_ACCESS_SECRET }}
+          aws-secret-access-key: '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'
           aws-region:  'eu-west-1'
-          aws-security-group-id: ${{secrets.AWS_SG}}
+          aws-security-group-id: 'sg-0917a411c6afa6089'
           protocol: 'tcp'
           description: 'GitHub Action Access (Staging)'
       - name: Clear Out EOSBackend Directory
