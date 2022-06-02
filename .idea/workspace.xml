@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="aa6b5ba8-e87d-41ea-8617-989131587a35" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/workflows/VisionEnhancingOpticlasCrm_deplotToStaging.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/VisionEnhancingOpticlasCrm_deplotToStaging.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -224,6 +224,7 @@
       <workItem from="1654102083091" duration="1505000" />
       <workItem from="1654104039991" duration="633000" />
       <workItem from="1654161637722" duration="600000" />
+      <workItem from="1654163025357" duration="336000" />
     </task>
     <servers />
   </component>
