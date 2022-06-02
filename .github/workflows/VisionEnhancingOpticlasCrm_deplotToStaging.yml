@@ -64,45 +64,6 @@ jobs:
             echo ASSET_URL=https://crm.visionenhancingsolutions.app >> .env
 
 
-            # Base Dorcas Settings
-            echo  DORCAS_EDITION=community >> .env
-            echo  SDK_HOST_PRODUCTION=https://core-crm.visionenhancingsolutions.app  >> .env
-            echo  DEPLOY_ENV=local >> .env
-            echo  DORCAS_CURL_SSL_VERIFY=false >> .env
-            echo   STANDARD_HOST=hub-base.test >> .env
-            echo  DORCAS_BASE_URL=https://core-crm.visionenhancingsolutions.app >> .env
-            echo  DORCAS_BASE_DOMAIN=core-crm.visionenhancingsolutions.app >> .env
-
-            echo   DORCAS_CLIENT_ID=1 >> .env
-            echo  DORCAS_CLIENT_SECRET=fWEzQI0VrwthPaKPM4rHp8nNthHARkzDnxW1L4a2 >> .env
-            echo  DORCAS_PERSONAL_CLIENT_ID=1 >> .env
-            echo  DORCAS_PERSONAL_CLIENT_SECRET=fWEzQI0VrwthPaKPM4rHp8nNthHARkzDnxW1L4a2 >> .env
-            echo  DORCAS_STORE_PAYMENT_VENDOR_URL="https://dorcas.ravepay.co/auth/" >> .env
-
-            echo  DORCAS_PARTNER_NAME ="Sample Community" >> .env
-            echo  DORCAS_PARTNER_SLUG ="community" >> .env
-            echo DORCAS_PARTNER_LOGO ="https://dorcas-s3.s3.eu-west-1.amazonaws.com/images/logo_main.png" >> .env
-            echo  DORCAS_PARENT_DOMAIN = "crm.visionenhancingsolutions.app" >> .env
-
-            # Database Settings
-            echo  DB_CONNECTION=mysql >> .env
-            echo  DB_HOST= ${{secrets.DB_HOST }} >> .env
-            echo  DB_PORT=3306 >> .env
-            echo DB_DATABASE=${{secrets.DB_NAME}} >> .env
-            echo  DB_USERNAME=${{secrets.DB_USER}} >> .env
-            echo  DB_PASSWORD=${{secrets.DB_PASSWORD}} >> .env
-            echo  DB_CORE_HOST=localhost >> .env
-            echo  DB_CORE_PORT=3306 >> .env
-
-            #echo  DB_CORE_DATABASE=${{secrets.DB_HOST}} >> .env
-            #echo  DB_CORE_USERNAME=${{secrets.DB_USER}} >> .env
-            #echo  DB_CORE_PASSWORD=${{secrets.DB_PASSWORD}} >> .env
-
-            # Other Laravel Settings
-            echo SESSION_DRIVER=file >> .env
-            echo  CACHE_DRIVER=file >> .env
-            echo  FILESYSTEM_DRIVER=public >> .env
-
             set -e
 
             echo "Deployment started ..."
