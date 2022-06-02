@@ -54,7 +54,7 @@ jobs:
             INSTALLED_HUB=false
             # Base Laravel Settings
             echo   APP_NAME=DorcasHubBase >> .env
-            echo   APP_ENV=local >> .env
+            echo   APP_ENV=production >> .env
             echo   APP_KEY=base64:MCwov2dPKeHqY28kzhntI3by1Hiie0/jVV7iSMtUrVM= >> .env
             echo   APP_DEBUG=true >> .env
             echo   APP_LOG_LEVEL=debug >> .env
@@ -79,9 +79,9 @@ jobs:
             echo  DORCAS_PERSONAL_CLIENT_SECRET=fWEzQI0VrwthPaKPM4rHp8nNthHARkzDnxW1L4a2 >> .env
             echo  DORCAS_STORE_PAYMENT_VENDOR_URL="https://dorcas.ravepay.co/auth/" >> .env
 
-            echo  DORCAS_PARTNER_NAME = "Sample Community" >> .env
-            echo  DORCAS_PARTNER_SLUG = "community" >> .env
-            echo DORCAS_PARTNER_LOGO = "https://dorcas-s3.s3.eu-west-1.amazonaws.com/images/logo_main.png" >> .env
+            echo  DORCAS_PARTNER_NAME ="Sample Community" >> .env
+            echo  DORCAS_PARTNER_SLUG ="community" >> .env
+            echo DORCAS_PARTNER_LOGO ="https://dorcas-s3.s3.eu-west-1.amazonaws.com/images/logo_main.png" >> .env
             echo  DORCAS_PARENT_DOMAIN = "crm.visionenhancingsolutions.app" >> .env
 
             # Database Settings
@@ -108,7 +108,7 @@ jobs:
             echo "Deployment started ..."
 
 
-            composer install --ignore-platform-reqs
+            composer update --ignore-platform-reqs
 
             php artisan optimize:clear
 

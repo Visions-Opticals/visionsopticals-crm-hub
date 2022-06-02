@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="aa6b5ba8-e87d-41ea-8617-989131587a35" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/workflows/VisionEnhancingOpticlasCrm_deplotToStaging.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/VisionEnhancingOpticlasCrm_deplotToStaging.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -174,6 +173,8 @@
       <path value="$PROJECT_DIR$/vendor/phpunit/phpunit" />
       <path value="$PROJECT_DIR$/vendor/phpunit/php-text-template" />
       <path value="$PROJECT_DIR$/vendor/nyholm/psr7" />
+      <path value="$PROJECT_DIR$/vendor/php-di/invoker" />
+      <path value="$PROJECT_DIR$/vendor/mnapoli/silly" />
     </include_path>
   </component>
   <component name="ProjectId" id="28moI8MEaN2EQGGn0MSqcbuqT3L" />
@@ -232,7 +233,7 @@
       <workItem from="1654166799403" duration="479000" />
       <workItem from="1654167335969" duration="238000" />
       <workItem from="1654181686673" duration="1009000" />
-      <workItem from="1654182892224" duration="583000" />
+      <workItem from="1654182892224" duration="853000" />
     </task>
     <servers />
   </component>
