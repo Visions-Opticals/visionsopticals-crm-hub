@@ -107,7 +107,8 @@ jobs:
 
             echo "Deployment started ..."
 
-            composer update
+
+            composer install --ignore-platform-reqs
 
             php artisan optimize:clear
 
