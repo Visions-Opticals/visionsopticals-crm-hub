@@ -16,24 +16,24 @@ jobs:
           aws-security-group-id: 'sg-0917a411c6afa6089'
           protocol: 'tcp'
           description: 'GitHub Action Access (Staging)'
-      - name: Clear Out EOSBackend Directory
+      - name: Clear Out VisionOpticalCRMHub Directory
         uses: appleboy/ssh-action@master
         with:
           host: ${{secrets.HOST}}
           username: ${{secrets.USER}}
           key: ${{ secrets.KEY }}
-          port: ${{secrets.PORT}}
+          port: '22'
           script: |
             sudo rm -rf ${{ secrets.PATH }}/*
             sudo mkdir ${{secrets.PATH}}
             sudo chown -R $USER:www-data  ${{secrets.PATH}}
-      - name: Copy VisionOpticalBackend Files
+      - name: Copy VisionOpticalCRMHubFiles
         uses: appleboy/scp-action@master
         with:
           host:  ${{secrets.HOST}}
           username: ${{secrets.USER}}
           key: ${{ secrets.KEY }}
-          port: ${{secrets.PORT}}
+          port: '22'
           overwrite: true
           source: "./*"
           target: ${{ secrets.PATH }}
@@ -44,7 +44,7 @@ jobs:
           host: ${{secrets.HOST}}
           username: ${{secrets.USER}}
           key:  ${{ secrets.KEY }}
-          port: ${{secrets.PORT}}
+          port: '22'
           script: |
             cd ${{ secrets.PATH }}/
             touch .env
