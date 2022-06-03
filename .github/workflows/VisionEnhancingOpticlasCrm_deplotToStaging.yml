@@ -53,6 +53,7 @@ jobs:
 
             INSTALLED_HUB=false
             # Base Laravel Settings
+            echo   INSTALLED_HUB = false >> .env
             echo   APP_NAME=DorcasHubBase >> .env
             echo   APP_ENV=production >> .env
             echo   APP_KEY=base64:MCwov2dPKeHqY28kzhntI3by1Hiie0/jVV7iSMtUrVM= >> .env
@@ -68,6 +69,27 @@ jobs:
             echo DB_DATABASE=${{secrets.DB_NAME}} >> .env
             echo  DB_USERNAME = ${{secrets.DB_USER}} >> .env
             echo  DB_PASSWORD=${{secrets.DB_PASSWORD}} >> .env
+
+
+            # Base Dorcas Settings
+            echo DORCAS_EDITION=community >> .env
+
+            echo SDK_HOST_PRODUCTION=https://core-crm.visionenhancingsolutions.app >> .env
+            echo DEPLOY_ENV=local >> .env
+
+            echo DORCAS_CURL_SSL_VERIFY=false >> .env
+
+            echo STANDARD_HOST=crm.visionenhancingsolutions.app >> .env
+
+            echo  DORCAS_BASE_URL=https://core-crm.visionenhancingsolutions.app >> .env
+            echo  DORCAS_BASE_DOMAIN=core-crm.visionenhancingsolutions.app >> .env
+
+            echo DORCAS_CLIENT_ID=1 >> .env
+
+            echo DORCAS_CLIENT_SECRET=fWEzQI0VrwthPaKPM4rHp8nNthHARkzDnxW1L4a2 >> .env
+            echo DORCAS_PERSONAL_CLIENT_ID=1 >> .env
+            echo DORCAS_PERSONAL_CLIENT_SECRET=fWEzQI0VrwthPaKPM4rHp8nNthHARkzDnxW1L4a2 >> .env
+            echo DORCAS_STORE_PAYMENT_VENDOR_URL="https://dorcas.ravepay.co/auth/" >> .env
 
             set -e
 
