@@ -69,16 +69,6 @@ jobs:
             echo  DB_USERNAME = ${{secrets.DB_USER}} >> .env
             echo  DB_PASSWORD=${{secrets.DB_PASSWORD}} >> .env
 
-          
-
-
-
-
-           
-
-
-
-
             set -e
 
             echo "Deployment started ..."
