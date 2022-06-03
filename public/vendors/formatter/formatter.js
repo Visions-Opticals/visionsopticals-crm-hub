@@ -107,7 +107,7 @@ var pattern = function () {
 /*
  * utils.js
  *
- * Independent helper methods (cross browser, etc..)
+ * Independent Helper methods (cross browser, etc..)
  *
  */
 var utils = function () {
@@ -678,7 +678,7 @@ var formatter = function (patternMatcher, inptSel, utils) {
     };
     //
     // @private
-    // Quick helper method to move the caret to the next pos
+    // Quick Helper method to move the caret to the next pos
     //
     Formatter.prototype._nextPos = function () {
       this.sel.end++;

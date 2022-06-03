@@ -1364,7 +1364,7 @@ Licensed under the MIT license.
         }
 
         function setTransformationHelpers(axis) {
-            // set helper functions on the axis, assumes plot area
+            // set Helper functions on the axis, assumes plot area
             // has been computed already
 
             function identity(x) { return x; }

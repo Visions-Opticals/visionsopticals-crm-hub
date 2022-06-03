@@ -2676,7 +2676,7 @@ var MouseFollower = Class.extend({
 /* A utility class for rendering <tr> rows.
 ----------------------------------------------------------------------------------------------------------------------*/
 // It leverages methods of the subclass and the View to determine custom rendering behavior for each row "type"
-// (such as highlight rows, day rows, helper rows, etc).
+// (such as highlight rows, day rows, Helper rows, etc).
 
 var RowRenderer = Class.extend({
 
@@ -3190,7 +3190,7 @@ var Grid = fc.Grid = RowRenderer.extend({
 		this.view.calendar.normalizeEventRange(fakeEvent);
 
 		// this extra className will be useful for differentiating real events from mock events in CSS
-		fakeEvent.className = (fakeEvent.className || []).concat('fc-helper');
+		fakeEvent.className = (fakeEvent.className || []).concat('fc-Helper');
 
 		// if something external is being dragged in, don't render a resizer
 		if (!sourceSeg) {
@@ -3738,10 +3738,10 @@ Grid.mixin({
 
 				// if a valid drop location, have the subclass render a visual indication
 				if (dropLocation && view.renderDrag(dropLocation, seg)) {
-					mouseFollower.hide(); // if the subclass is already using a mock event "helper", hide our own
+					mouseFollower.hide(); // if the subclass is already using a mock event "Helper", hide our own
 				}
 				else {
-					mouseFollower.show(); // otherwise, have the helper follow the mouse (no snapping)
+					mouseFollower.show(); // otherwise, have the Helper follow the mouse (no snapping)
 				}
 
 				if (isOrig) {
@@ -3848,7 +3848,7 @@ Grid.mixin({
 		if (opacity != null) {
 			els.each(function(i, node) {
 				// Don't use jQuery (will set an IE filter), do it the old fashioned way.
-				// In IE8, a helper element will disappears if there's a filter.
+				// In IE8, a Helper element will disappears if there's a filter.
 				node.style.opacity = opacity;
 			});
 		}
@@ -3957,7 +3957,7 @@ Grid.mixin({
 	// Renders a visual indication of an event or external element being dragged.
 	// `dropLocation` contains hypothetical start/end/allDay values the event would have if dropped. end can be null.
 	// `seg` is the internal segment object that is being dragged. If dragging an external element, `seg` is null.
-	// A truthy returned value indicates this method has rendered a helper element.
+	// A truthy returned value indicates this method has rendered a Helper element.
 	renderDrag: function(dropLocation, seg) {
 		// subclasses must implement
 	},
@@ -4475,7 +4475,7 @@ var DayGrid = Grid.extend({
 
 	rowEls: null, // set of fake row elements
 	dayEls: null, // set of whole-day elements comprising the row's background
-	helperEls: null, // set of cell skeleton elements for rendering the mock event "helper"
+	helperEls: null, // set of cell skeleton elements for rendering the mock event "Helper"
 
 
 	constructor: function() {
@@ -4786,13 +4786,13 @@ var DayGrid = Grid.extend({
 			this.view.calendar.ensureVisibleEventRange(dropLocation) // needs to be a proper range
 		);
 
-		// if a segment from the same calendar but another component is being dragged, render a helper event
+		// if a segment from the same calendar but another component is being dragged, render a Helper event
 		if (seg && !seg.el.closest(this.el).length) {
 
 			this.renderRangeHelper(dropLocation, seg);
 			this.applyDragOpacity(this.helperEls);
 
-			return true; // a helper has been rendered
+			return true; // a Helper has been rendered
 		}
 	},
 
@@ -4826,7 +4826,7 @@ var DayGrid = Grid.extend({
 	------------------------------------------------------------------------------------------------------------------*/
 
 
-	// Renders a mock "helper" event. `sourceSeg` is the associated internal segment object. It can be null.
+	// Renders a mock "Helper" event. `sourceSeg` is the associated internal segment object. It can be null.
 	renderHelper: function(event, sourceSeg) {
 		var helperNodes = [];
 		var segs = this.eventsToSegs([ event ]);
@@ -4838,7 +4838,7 @@ var DayGrid = Grid.extend({
 		// inject each new event skeleton into each associated row
 		this.rowEls.each(function(row, rowNode) {
 			var rowEl = $(rowNode); // the .fc-row
-			var skeletonEl = $('<div class="fc-helper-skeleton"><table/></div>'); // will be absolutely positioned
+			var skeletonEl = $('<div class="fc-Helper-skeleton"><table/></div>'); // will be absolutely positioned
 			var skeletonTop;
 
 			// If there is an original segment, match the top position. Otherwise, put it at the row's top level
@@ -4861,7 +4861,7 @@ var DayGrid = Grid.extend({
 	},
 
 
-	// Unrenders any visual indication of a mock helper event
+	// Unrenders any visual indication of a mock Helper event
 	destroyHelper: function() {
 		if (this.helperEls) {
 			this.helperEls.remove();
@@ -5644,7 +5644,7 @@ var TimeGrid = Grid.extend({
 
 	slatTops: null, // an array of top positions, relative to the container. last item holds bottom of last slot
 
-	helperEl: null, // cell skeleton element for rendering the mock event "helper"
+	helperEl: null, // cell skeleton element for rendering the mock event "Helper"
 
 	businessHourSegs: null,
 
@@ -5960,14 +5960,14 @@ var TimeGrid = Grid.extend({
 
 	// Renders a visual indication of an event being dragged over the specified date(s).
 	// dropLocation's end might be null, as well as `seg`. See Grid::renderDrag for more info.
-	// A returned value of `true` signals that a mock "helper" event has been rendered.
+	// A returned value of `true` signals that a mock "Helper" event has been rendered.
 	renderDrag: function(dropLocation, seg) {
 
-		if (seg) { // if there is event information for this drag, render a helper event
+		if (seg) { // if there is event information for this drag, render a Helper event
 			this.renderRangeHelper(dropLocation, seg);
 			this.applyDragOpacity(this.helperEl);
 
-			return true; // signal that a helper has been rendered
+			return true; // signal that a Helper has been rendered
 		}
 		else {
 			// otherwise, just render a highlight
@@ -6005,7 +6005,7 @@ var TimeGrid = Grid.extend({
 	------------------------------------------------------------------------------------------------------------------*/
 
 
-	// Renders a mock "helper" event. `sourceSeg` is the original segment object and might be null (an external drag)
+	// Renders a mock "Helper" event. `sourceSeg` is the original segment object and might be null (an external drag)
 	renderHelper: function(event, sourceSeg) {
 		var segs = this.eventsToSegs([ event ]);
 		var tableEl;
@@ -6029,13 +6029,13 @@ var TimeGrid = Grid.extend({
 			}
 		}
 
-		this.helperEl = $('<div class="fc-helper-skeleton"/>')
+		this.helperEl = $('<div class="fc-Helper-skeleton"/>')
 			.append(tableEl)
 				.appendTo(this.el);
 	},
 
 
-	// Unrenders any mock helper event
+	// Unrenders any mock Helper event
 	destroyHelper: function() {
 		if (this.helperEl) {
 			this.helperEl.remove();
@@ -6050,7 +6050,7 @@ var TimeGrid = Grid.extend({
 
 	// Renders a visual indication of a selection. Overrides the default, which was to simply render a highlight.
 	renderSelection: function(range) {
-		if (this.view.opt('selectHelper')) { // this setting signals that a mock helper event should be rendered
+		if (this.view.opt('selectHelper')) { // this setting signals that a mock Helper event should be rendered
 			this.renderRangeHelper(range);
 		}
 		else {
@@ -10134,7 +10134,7 @@ var BasicView = fcViews.basic = View.extend({
 
 
 	// Generates the HTML that goes before every other type of row generated by DayGrid. Ordering depends on isRTL.
-	// Affects helper-skeleton and highlight-skeleton rows.
+	// Affects Helper-skeleton and highlight-skeleton rows.
 	introHtml: function() {
 		if (this.weekNumbersVisible) {
 			return '<td class="fc-week-number" ' + this.weekNumberStyleAttr() + '></td>';
@@ -10272,7 +10272,7 @@ var BasicView = fcViews.basic = View.extend({
 	------------------------------------------------------------------------------------------------------------------*/
 
 
-	// A returned value of `true` signals that a mock "helper" event has been rendered.
+	// A returned value of `true` signals that a mock "Helper" event has been rendered.
 	renderDrag: function(dropLocation, seg) {
 		return this.dayGrid.renderDrag(dropLocation, seg);
 	},
@@ -10558,7 +10558,7 @@ var AgendaView = fcViews.agenda = View.extend({
 
 
 	// Generates the HTML that goes before all other types of cells.
-	// Affects content-skeleton, helper-skeleton, highlight-skeleton for both the time-grid and day-grid.
+	// Affects content-skeleton, Helper-skeleton, highlight-skeleton for both the time-grid and day-grid.
 	// Queried by the TimeGrid and DayGrid subcomponents when generating rows. Ordering depends on isRTL.
 	introHtml: function() {
 		return '<td class="fc-axis" ' + this.axisStyleAttr() + '></td>';
@@ -10719,7 +10719,7 @@ var AgendaView = fcViews.agenda = View.extend({
 	------------------------------------------------------------------------------------------------------------------*/
 
 
-	// A returned value of `true` signals that a mock "helper" event has been rendered.
+	// A returned value of `true` signals that a mock "Helper" event has been rendered.
 	renderDrag: function(dropLocation, seg) {
 		if (dropLocation.start.hasTime()) {
 			return this.timeGrid.renderDrag(dropLocation, seg);

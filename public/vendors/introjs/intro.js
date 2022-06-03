@@ -367,7 +367,7 @@
       }
     }, 500);
 
-    //remove all helper layers
+    //remove all Helper layers
     var helperLayer = targetElement.querySelector('.introjs-helperLayer');
     if (helperLayer) {
       helperLayer.parentNode.removeChild(helperLayer);
@@ -660,7 +660,7 @@
   }
 
   /**
-   * Update the position of the helper layer on the screen
+   * Update the position of the Helper layer on the screen
    *
    * @api private
    * @method _setHelperLayerPosition
@@ -679,7 +679,7 @@
         widthHeightPadding = 0;
       }
 
-      //set new position to helper layer
+      //set new position to Helper layer
       helperLayer.setAttribute('style', 'width: ' + (elementPosition.width  + widthHeightPadding)  + 'px; ' +
                                         'height:' + (elementPosition.height + widthHeightPadding)  + 'px; ' +
                                         'top:'    + (elementPosition.top    - 5)   + 'px;' +
@@ -742,7 +742,7 @@
           prevTooltipButton    = oldReferenceLayer.querySelector('.introjs-prevbutton'),
           nextTooltipButton    = oldReferenceLayer.querySelector('.introjs-nextbutton');
 
-      //update or reset the helper highlight class
+      //update or reset the Helper highlight class
       oldHelperLayer.className = highlightClass;
       //hide the tooltip
       oldtooltipContainer.style.opacity = 0;
@@ -756,7 +756,7 @@
         }
       }
 
-      //set new position to helper layer
+      //set new position to Helper layer
       _setHelperLayerPosition.call(self, oldHelperLayer);
       _setHelperLayerPosition.call(self, oldReferenceLayer);
 
@@ -820,11 +820,11 @@
       helperLayer.className = highlightClass;
       referenceLayer.className = 'introjs-tooltipReferenceLayer';
 
-      //set new position to helper layer
+      //set new position to Helper layer
       _setHelperLayerPosition.call(self, helperLayer);
       _setHelperLayerPosition.call(self, referenceLayer);
 
-      //add helper layer to target element
+      //add Helper layer to target element
       this._targetElement.appendChild(helperLayer);
       this._targetElement.appendChild(referenceLayer);
 
@@ -882,7 +882,7 @@
       tooltipLayer.appendChild(bulletsLayer);
       tooltipLayer.appendChild(progressLayer);
 
-      //add helper layer number
+      //add Helper layer number
       if (this._options.showStepNumbers == true) {
         var helperNumberLayer = document.createElement('span');
         helperNumberLayer.className = 'introjs-helperNumberLayer';

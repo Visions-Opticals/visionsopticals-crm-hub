@@ -231,7 +231,7 @@
 
     /**
      * Helper function for invoking a callback, whether defined as a function literal
-     * or an array that references a registered helper function.
+     * or an array that references a registered Helper function.
      * @private
      */
     invokeCallback: function invokeCallback(cb) {
@@ -239,7 +239,7 @@
         return cb();
       }
       if (typeof cb === 'string' && helpers[cb]) {
-        // name of a helper
+        // name of a Helper
         return helpers[cb]();
       } else {
         // assuming array
@@ -248,8 +248,8 @@
     },
 
     /**
-     * If stepCb (the step-specific helper callback) is passed in, then invoke
-     * it first. Then invoke tour-wide helper.
+     * If stepCb (the step-specific Helper callback) is passed in, then invoke
+     * it first. Then invoke tour-wide Helper.
      *
      * @private
      */
@@ -1771,7 +1771,7 @@
       bubble.hide(false);
 
       bubble.render(step, stepNum, function (adjustScroll) {
-        // when done adjusting window scroll, call showBubble helper fn
+        // when done adjusting window scroll, call showBubble Helper fn
         if (adjustScroll) {
           adjustWindowScroll(showBubble);
         } else {
@@ -2163,7 +2163,7 @@
     /**
      * registerHelper
      * ==============
-     * Registers a helper function to be used as a callback function.
+     * Registers a Helper function to be used as a callback function.
      *
      * @param {String} id The id of the function.
      * @param {Function} id The callback function.

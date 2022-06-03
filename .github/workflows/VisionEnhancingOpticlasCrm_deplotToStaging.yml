@@ -63,6 +63,14 @@ jobs:
             echo APP_URL_STATIC=https://crm.visionenhancingsolutions.app >> .env
             echo ASSET_URL=https://crm.visionenhancingsolutions.app >> .env
 
+            echo DB_CONNECTION= mysql >> .env
+            echo DB_HOST     =l ocalhost >> .env
+            echo DB_PORT     = $((secrets.DB_HOST}} >> .env
+            echo DB_DATABASE = ${{secrets.DB_NAME}} >> .env
+            echo DB_USERNAME = ${{secrets.DB_USER}} >> .env
+            echo DB_PASSWORD = ${{secrets.DB_PASSWORD}}>> .env
+
+
 
             set -e
 

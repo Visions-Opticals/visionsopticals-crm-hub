@@ -4,7 +4,7 @@ namespace App\Dorcas\Hub\Utilities;
 
 /**
  * Class Gravatar
- * A helper class to help with getting Gravatar images based on the supplied email address
+ * A Helper class to help with getting Gravatar images based on the supplied email address
  *
  * @link https://en.gravatar.com/site/implement/images/
  * @package BrassPay\BrassPay\Utilities

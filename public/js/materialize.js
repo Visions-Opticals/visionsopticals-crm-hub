@@ -7157,7 +7157,7 @@ if (jQuery) {
   }
 
   /**
-   * PickerConstructor helper methods.
+   * PickerConstructor Helper methods.
    */
   PickerConstructor._ = {
 

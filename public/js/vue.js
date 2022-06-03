@@ -2527,7 +2527,7 @@ function eventsMixin (Vue) {
 
 
 /**
- * Runtime helper for resolving raw children VNodes into a slot object.
+ * Runtime Helper for resolving raw children VNodes into a slot object.
  */
 function resolveSlots (
   children,
@@ -3653,7 +3653,7 @@ function resolveInject (inject, vm) {
 /*  */
 
 /**
- * Runtime helper for rendering v-for lists.
+ * Runtime Helper for rendering v-for lists.
  */
 function renderList (
   val,
@@ -3687,7 +3687,7 @@ function renderList (
 /*  */
 
 /**
- * Runtime helper for rendering <slot>
+ * Runtime Helper for rendering <slot>
  */
 function renderSlot (
   name,
@@ -3736,7 +3736,7 @@ function renderSlot (
 /*  */
 
 /**
- * Runtime helper for resolving filters
+ * Runtime Helper for resolving filters
  */
 function resolveFilter (id) {
   return resolveAsset(this.$options, 'filters', id, true) || identity
@@ -3745,7 +3745,7 @@ function resolveFilter (id) {
 /*  */
 
 /**
- * Runtime helper for checking keyCodes from config.
+ * Runtime Helper for checking keyCodes from config.
  * exposed as Vue.prototype._k
  * passing in eventKeyName as last argument separately for backwards compat
  */
@@ -3770,7 +3770,7 @@ function checkKeyCodes (
 /*  */
 
 /**
- * Runtime helper for merging v-bind="object" into a VNode's data.
+ * Runtime Helper for merging v-bind="object" into a VNode's data.
  */
 function bindObjectProps (
   data,
@@ -3824,7 +3824,7 @@ function bindObjectProps (
 /*  */
 
 /**
- * Runtime helper for rendering static trees.
+ * Runtime Helper for rendering static trees.
  */
 function renderStatic (
   index,
@@ -3850,7 +3850,7 @@ function renderStatic (
 }
 
 /**
- * Runtime helper for v-once.
+ * Runtime Helper for v-once.
  * Effectively it means marking the node as static with a unique key.
  */
 function markOnce (
@@ -6620,7 +6620,7 @@ function genComponentModel (
 }
 
 /**
- * Cross-platform codegen helper for generating v-model value assignment code.
+ * Cross-platform codegen Helper for generating v-model value assignment code.
  */
 function genAssignmentCode (
   value,

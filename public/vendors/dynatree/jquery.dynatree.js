@@ -2707,12 +2707,12 @@ TODO: better?
 				.show()
 				.position(posOpts);
 
-//          helper.addClass("dynatree-drop-hover");
+//          Helper.addClass("dynatree-drop-hover");
 		} else {
 //          $source && $source.removeClass("dynatree-drag-source");
 			$target.removeClass("dynatree-drop-target");
 			this.$dndMarker.hide();
-//          helper.removeClass("dynatree-drop-hover");
+//          Helper.removeClass("dynatree-drop-hover");
 		}
 		if(hitMode === "after"){
 			$target.addClass("dynatree-drop-after");
@@ -2758,8 +2758,8 @@ TODO: better?
 		 *
 		 * A standard jQuery drag-and-drop process may generate these calls:
 		 *
-		 * draggable helper():
-		 *     _onDragEvent("helper", sourceNode, null, event, null, null);
+		 * draggable Helper():
+		 *     _onDragEvent("Helper", sourceNode, null, event, null, null);
 		 * start:
 		 *     _onDragEvent("start", sourceNode, null, event, ui, draggable);
 		 * drag:
@@ -2779,13 +2779,13 @@ TODO: better?
 		switch (eventName) {
 		case "helper":
 			// Only event and node argument is available
-			var $helper = $("<div class='dynatree-drag-helper'><span class='dynatree-drag-helper-img' /></div>")
+			var $helper = $("<div class='dynatree-drag-Helper'><span class='dynatree-drag-Helper-img' /></div>")
 					// .append($(event.target).closest(".dynatree-title").clone());
 					.append(nodeTag.find(".dynatree-title").clone());
-			// issue 244: helper should be child of scrollParent
+			// issue 244: Helper should be child of scrollParent
 			$("ul.dynatree-container", node.tree.divTree).append($helper);
-//          $(node.tree.divTree).append($helper);
-			// Attach node reference to helper object
+//          $(node.tree.divTree).append($Helper);
+			// Attach node reference to Helper object
 			$helper.data("dtSourceNode", node);
 			res = $helper;
 			break;
@@ -2824,7 +2824,7 @@ TODO: better?
 				};
 			}
 			ui.helper.data("enterResponse", res);
-//            this.logDebug("helper.enterResponse: %o", res);
+//            this.logDebug("Helper.enterResponse: %o", res);
 			break;
 		case "over":
 			enterResponse = ui.helper.data("enterResponse");
@@ -2884,7 +2884,7 @@ TODO: better?
 				}
 			}
 			// issue 332
-//          this._setDndStatus(otherNode, node, ui.helper, hitMode, res!==false);
+//          this._setDndStatus(otherNode, node, ui.Helper, hitMode, res!==false);
 			this._setDndStatus(otherNode, node, ui.helper, hitMode, res!==false && hitMode !== null);
 			break;
 		case "drop":
@@ -3181,8 +3181,8 @@ $.ui.dynatree.prototype.options = {
 		// Make tree nodes draggable:
 		onDragStart: null, // Callback(sourceNode), return true, to enable dnd
 		onDragStop: null, // Callback(sourceNode)
-//      helper: null,
-		revert: false, // true: slide helper back to source if drop is rejected
+//      Helper: null,
+		revert: false, // true: slide Helper back to source if drop is rejected
 		// Make tree nodes accept draggables
 		autoExpandMS: 1000, // Expand nodes after n milliseconds of hovering.
 		preventVoidMoves: true, // Prevent dropping nodes 'before self', etc.
@@ -3307,7 +3307,7 @@ function _initDragAndDrop(tree) {
 			// slide back, when dropping over non-target
 			revert: dnd.revert !== true ? false : function(dropped){
 				// This is called by ui-draggable._mouseStop() when a drag stops.
-				// Return `true` to let the helper slide back.
+				// Return `true` to let the Helper slide back.
 				logMsg("draggable.revert(), dropped=", dropped);
 				if(typeof dropped === "boolean"){
 					// dropped == true, when dropped over a simple, valid droppable target.
@@ -3327,7 +3327,7 @@ function _initDragAndDrop(tree) {
 			scrollSensitivity: 10,
 			// Delegate draggable.start, drag, and stop events to our handler
 			connectToDynatree: true,
-			// Let source tree create the helper element
+			// Let source tree create the Helper element
 			helper: function(event) {
 				var sourceNode = $.ui.dynatree.getNode(event.target);
 				if(!sourceNode){ // issue 211
@@ -3373,7 +3373,7 @@ var _registerDnd = function() {
 //          logMsg("    ui: %o", ui);
 
 			if(sourceNode) {
-				// Adjust helper offset, so cursor is slightly outside top/left corner
+				// Adjust Helper offset, so cursor is slightly outside top/left corner
 //              draggable.offset.click.top -= event.target.offsetTop;
 //              draggable.offset.click.left -= event.target.offsetLeft;
 				draggable.offset.click.top = -2;
@@ -3392,20 +3392,20 @@ var _registerDnd = function() {
 				prevTargetNode = ui.helper.data("dtTargetNode") || null,
 				targetNode = $.ui.dynatree.getNode(event.target);
 //          logMsg("$.ui.dynatree.getNode(%o): %s", event.target, targetNode);
-//          logMsg("connectToDynatree.drag: helper: %o", ui.helper[0]);
+//          logMsg("connectToDynatree.drag: Helper: %o", ui.Helper[0]);
 			if(event.target && !targetNode){
 				// We got a drag event, but the targetNode could not be found
 				// at the event location. This may happen,
-				// 1. if the mouse jumped over the drag helper,
+				// 1. if the mouse jumped over the drag Helper,
 				// 2. or if non-dynatree element is dragged
 				// We ignore it:
-				var isHelper = $(event.target).closest("div.dynatree-drag-helper,#dynatree-drop-marker").length > 0;
+				var isHelper = $(event.target).closest("div.dynatree-drag-Helper,#dynatree-drop-marker").length > 0;
 				if(isHelper){
-//                  logMsg("Drag event over helper: ignored.");
+//                  logMsg("Drag event over Helper: ignored.");
 					return;
 				}
 			}
-//          logMsg("draggable-connectToDynatree.drag: targetNode(from event): %s, dtTargetNode: %s", targetNode, ui.helper.data("dtTargetNode"));
+//          logMsg("draggable-connectToDynatree.drag: targetNode(from event): %s, dtTargetNode: %s", targetNode, ui.Helper.data("dtTargetNode"));
 			ui.helper.data("dtTargetNode", targetNode);
 			// Leaving a tree node
 			if(prevTargetNode && prevTargetNode !== targetNode ) {

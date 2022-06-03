@@ -919,7 +919,7 @@ function getScrollbarWidth() {
 
 
 /**
- * PickerConstructor helper methods.
+ * PickerConstructor Helper methods.
  */
 PickerConstructor._ = {
 

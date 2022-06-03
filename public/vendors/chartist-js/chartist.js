@@ -135,7 +135,7 @@ var Chartist = {
   };
 
   /**
-   * Functional style helper to produce array with given length initialized with undefined values
+   * Functional style Helper to produce array with given length initialized with undefined values
    *
    * @memberof Chartist.Core
    * @param length
@@ -146,7 +146,7 @@ var Chartist = {
   };
 
   /**
-   * Sum helper to be used in reduce functions
+   * Sum Helper to be used in reduce functions
    *
    * @memberof Chartist.Core
    * @param previous
@@ -183,7 +183,7 @@ var Chartist = {
   };
 
   /**
-   * This helper function can be used to round values with certain precision level after decimal. This is used to prevent rounding errors near float point precision limit.
+   * This Helper function can be used to round values with certain precision level after decimal. This is used to prevent rounding errors near float point precision limit.
    *
    * @memberof Chartist.Core
    * @param {Number} value The value that should be rounded with precision
@@ -1890,7 +1890,7 @@ var Chartist = {
   Chartist.Svg.Easing = easingCubicBeziers;
 
   /**
-   * This helper class is to wrap multiple `Chartist.Svg` elements into a list where you can call the `Chartist.Svg` functions on all elements in the list with one call. This is helpful when you'd like to perform calls with `Chartist.Svg` on multiple elements.
+   * This Helper class is to wrap multiple `Chartist.Svg` elements into a list where you can call the `Chartist.Svg` functions on all elements in the list with one call. This is helpful when you'd like to perform calls with `Chartist.Svg` on multiple elements.
    * An instance of this class is also returned by `Chartist.Svg.querySelectorAll`.
    *
    * @memberof Chartist.Svg
