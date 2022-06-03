@@ -3,39 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="aa6b5ba8-e87d-41ea-8617-989131587a35" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.github/workflows/VisionEnhancingOpticlasCrm_deplotToStaging.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/VisionEnhancingOpticlasCrm_deplotToStaging.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Dorcas/Hub/Utilities/Gravatar.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Dorcas/Hub/Utilities/Gravatar.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/database.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/database.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/apps/tabler/js/lib/vue.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/apps/tabler/js/lib/vue.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/apps/tabler/js/vendors/selectize.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/apps/tabler/js/vendors/selectize.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/apps/tabler/plugins/fullcalendar/js/fullcalendar.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/apps/tabler/plugins/fullcalendar/js/fullcalendar.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/apps/vpanel/js/fullcalendar.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/apps/vpanel/js/fullcalendar.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/apps/vpanel/js/vue.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/apps/vpanel/js/vue.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/apps/webstore/js/plugins.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/apps/webstore/js/plugins.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/hopscotch.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/hopscotch.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/intro.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/intro.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/materialize-plugin/bin/materialize.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/materialize-plugin/bin/materialize.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/materialize-plugin/date_picker/picker.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/materialize-plugin/date_picker/picker.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/materialize.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/materialize.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/moment.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/moment.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/selectize.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/selectize.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/vue.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/vue.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/vendors/chartist-js/chartist.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/vendors/chartist-js/chartist.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/vendors/data-tables/js/jquery.dataTables.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/vendors/data-tables/js/jquery.dataTables.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/vendors/data-tables/js/jquery.dataTables.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/vendors/data-tables/js/jquery.dataTables.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/vendors/dynatree/jquery.dynatree.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/vendors/dynatree/jquery.dynatree.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/vendors/flot-chart/jquery.flot.image.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/vendors/flot-chart/jquery.flot.image.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/vendors/flot-chart/jquery.flot.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/vendors/flot-chart/jquery.flot.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/vendors/formatter/formatter.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/vendors/formatter/formatter.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/vendors/formatter/jquery.formatter.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/vendors/formatter/jquery.formatter.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/vendors/fullcalendar/css/fullcalendar.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/vendors/fullcalendar/css/fullcalendar.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/vendors/fullcalendar/js/fullcalendar.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/vendors/fullcalendar/js/fullcalendar.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/vendors/fullcalendar/js/fullcalendar.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/vendors/fullcalendar/js/fullcalendar.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/vendors/introjs/intro.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/vendors/introjs/intro.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/vendors/jquery-ui.custom.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/vendors/jquery-ui.custom.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/vendors/selectize.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/vendors/selectize.min.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -280,7 +247,7 @@
       <workItem from="1654248579751" duration="205000" />
       <workItem from="1654248992812" duration="14000" />
       <workItem from="1654249026726" duration="109000" />
-      <workItem from="1654249171368" duration="328000" />
+      <workItem from="1654249171368" duration="635000" />
     </task>
     <servers />
   </component>
