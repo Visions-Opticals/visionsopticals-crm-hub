@@ -63,6 +63,9 @@ jobs:
             echo APP_URL_STATIC=https://crm.visionenhancingsolutions.app >> .env
             echo ASSET_URL=https://crm.visionenhancingsolutions.app >> .env
 
+            echo DB_CONNECTION= mysql >> .env
+                   
+
            
 
 
