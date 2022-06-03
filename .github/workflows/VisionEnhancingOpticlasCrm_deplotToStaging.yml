@@ -67,6 +67,7 @@ jobs:
             echo  DB_PORT=3306 >> .env
             echo DB_DATABASE=${{secrets.DB_NAME}} >> .env
             echo  DB_USERNAME = ${{secrets.DB_USER}} >> .env
+            echo  DB_PASSWORD=${{secrets.DB_PASSWORD}} >> .env
 
           
 
