@@ -19,7 +19,7 @@ jobs:
       - name: Clear Out VisionOpticalCRMHub Directory
         uses: appleboy/ssh-action@master
         with:
-          host: ${{secrets.PATH}}
+          host: ${{secrets.HOST}
           username: ${{secrets.USER}}
           key: ${{secrets.KEY}}
           port: '22'
