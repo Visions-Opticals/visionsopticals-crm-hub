@@ -79,6 +79,7 @@ class LoginController extends Controller
             $db = DB::connection('core_mysql');
             $partner = $db->table("partners")->find(1); // first/default partner record
 
+
             $this->data['userHostMode'] = "partner";
             $this->data['userHostString'] = " by " . $partner->name;
 

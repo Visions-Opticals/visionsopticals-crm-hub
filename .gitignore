@@ -11,6 +11,8 @@ app/storage/
 
 composer-dev.txt
 composer-live.txt
+composer-dev.json
+composer-live.json
 
 public/storage
 public/hot
