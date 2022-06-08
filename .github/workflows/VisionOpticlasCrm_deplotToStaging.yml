@@ -119,7 +119,7 @@ jobs:
             sudo chmod u=rwx,g=rx,o=x ${{ secrets.PATH }}/artisan
             find "${{ secrets.PATH }}" -type f -name '*.php' -exec chmod 644 {} \;
             php artisan migrate --force
-            php artsian db:seed
-            
+            # php artsian db:seed
+
 
             echo "Deployment finished!"
