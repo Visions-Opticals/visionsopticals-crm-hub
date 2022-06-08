@@ -24,6 +24,8 @@ jobs:
           key: ${{secrets.KEY}}
           port: '22'
           script: |
+            cd ${{ secrets.PATH }} && sudo rm -rf ..?* .[!.]* *
+            cd ../../../
             sudo rm -rf ${{ secrets.PATH }}/*
             sudo mkdir ${{secrets.PATH}}
             sudo chown -R $USER:www-data  ${{secrets.PATH}}
