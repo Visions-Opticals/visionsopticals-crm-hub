@@ -96,8 +96,8 @@ jobs:
             echo DORCAS_CLIENT_ID=1 >> .env
 
             echo DORCAS_CLIENT_SECRET=fWEzQI0VrwthPaKPM4rHp8nNthHARkzDnxW1L4a2 >> .env
-            echo DORCAS_PERSONAL_CLIENT_ID=1 >> .env
-            echo DORCAS_PERSONAL_CLIENT_SECRET=fWEzQI0VrwthPaKPM4rHp8nNthHARkzDnxW1L4a2 >> .env
+            echo DORCAS_PERSONAL_CLIENT_ID=6 >> .env
+            echo DORCAS_PERSONAL_CLIENT_SECRET=OZKWT6JkP0SGllcdyFl635meZ70Aqebn5EIj5kbn >> .env
             echo DORCAS_STORE_PAYMENT_VENDOR_URL="https://dorcas.ravepay.co/auth/" >> .env
 
             echo DORCAS_PARTNER_NAME = "SampleCommunity" >> .env
