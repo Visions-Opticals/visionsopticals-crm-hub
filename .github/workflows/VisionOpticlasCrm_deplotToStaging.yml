@@ -73,6 +73,12 @@ jobs:
             echo  DB_USERNAME = ${{secrets.DB_USER}} >> .env
             echo  DB_PASSWORD=${{secrets.DB_PASSWORD}} >> .env
 
+            echo DB_CORE_HOST=${{secrets.DB_HOST}} >> .env
+            echo  DB_CORE_PORT=3306 >> .env
+            echo  DB_CORE_DATABASE="visions_opticals_crm_core" >> .env
+            echo  DB_CORE_USERNAME=${{secrets.DB_USER}}   >> .env
+            echo DB_CORE_PASSWORD=${{secrets.DB_PASSWORD}} >> .env
+
 
             # Base Dorcas Settings
             echo DORCAS_EDITION=community >> .env
