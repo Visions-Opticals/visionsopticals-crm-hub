@@ -100,7 +100,7 @@ jobs:
             echo DORCAS_PERSONAL_CLIENT_SECRET=jGCPIUWo9OtZKtqXKFx4xKRPb16NC0A1ZueNlABB >> .env
             echo DORCAS_STORE_PAYMENT_VENDOR_URL="https://dorcas.ravepay.co/auth/" >> .env
 
-            echo DORCAS_PARTNER_NAME = "SampleCommunity" >> .env
+            echo DORCAS_PARTNER_NAME = "VisionEnhancingOpticals" >> .env
             echo DORCAS_PARTNER_SLUG = "community" >> .env
             echo  DORCAS_PARTNER_LOGO = "https://dorcas-s3.s3.eu-west-1.amazonaws.com/images/logo_main.png" >> .env
             echo  DORCAS_PARENT_DOMAIN = "crm.visionenhancingsolutions.app" >> .env
