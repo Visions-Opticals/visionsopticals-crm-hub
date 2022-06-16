@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "6dc486056994d22d0be5e881962f4f1f",
+    "content-hash": "efbc92701ef17a0801f5eb512118a4be",
     "packages": [
         {
             "name": "async-aws/core",
@@ -182,16 +182,16 @@
         },
         {
             "name": "aws/aws-sdk-php",
-            "version": "3.224.3",
+            "version": "3.225.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/aws/aws-sdk-php.git",
-                "reference": "52f45dfe0d1e5a77f33c050bde5134901fc54a57"
+                "reference": "09b404c6b80b9c31be15fa245e647a2f9fb5e733"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/52f45dfe0d1e5a77f33c050bde5134901fc54a57",
-                "reference": "52f45dfe0d1e5a77f33c050bde5134901fc54a57",
+                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/09b404c6b80b9c31be15fa245e647a2f9fb5e733",
+                "reference": "09b404c6b80b9c31be15fa245e647a2f9fb5e733",
                 "shasum": ""
             },
             "require": {
@@ -267,9 +267,9 @@
             "support": {
                 "forum": "https://forums.aws.amazon.com/forum.jspa?forumID=80",
                 "issues": "https://github.com/aws/aws-sdk-php/issues",
-                "source": "https://github.com/aws/aws-sdk-php/tree/3.224.3"
+                "source": "https://github.com/aws/aws-sdk-php/tree/3.225.5"
             },
-            "time": "2022-06-02T18:22:57+00:00"
+            "time": "2022-06-15T19:35:13+00:00"
         },
         {
             "name": "barryvdh/laravel-dompdf",
@@ -339,16 +339,16 @@
         },
         {
             "name": "bref/bref",
-            "version": "1.5.7",
+            "version": "1.5.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/brefphp/bref.git",
-                "reference": "3dea58f0633cea7722a54c824c5bcfedc4251305"
+                "reference": "bdf833131d035d77d473d89b8c901688916fc2d8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/brefphp/bref/zipball/3dea58f0633cea7722a54c824c5bcfedc4251305",
-                "reference": "3dea58f0633cea7722a54c824c5bcfedc4251305",
+                "url": "https://api.github.com/repos/brefphp/bref/zipball/bdf833131d035d77d473d89b8c901688916fc2d8",
+                "reference": "bdf833131d035d77d473d89b8c901688916fc2d8",
                 "shasum": ""
             },
             "require": {
@@ -374,7 +374,7 @@
                 "dms/phpunit-arraysubset-asserts": "^0.2.0",
                 "doctrine/coding-standard": "^8.0",
                 "guzzlehttp/guzzle": "^6.3",
-                "phpstan/phpstan": "^0.12",
+                "phpstan/phpstan": "^1.0",
                 "phpunit/phpunit": "^9.0"
             },
             "bin": [
@@ -401,7 +401,7 @@
             ],
             "support": {
                 "issues": "https://github.com/brefphp/bref/issues",
-                "source": "https://github.com/brefphp/bref/tree/1.5.7"
+                "source": "https://github.com/brefphp/bref/tree/1.5.8"
             },
             "funding": [
                 {
@@ -413,7 +413,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2022-05-25T18:59:40+00:00"
+            "time": "2022-06-10T14:50:50+00:00"
         },
         {
             "name": "bref/laravel-bridge",
@@ -1091,20 +1091,20 @@
         },
         {
             "name": "dorcas/laravel-compat",
-            "version": "dev-master",
+            "version": "dev-dev-ola",
             "source": {
                 "type": "git",
                 "url": "https://github.com/dorcas-io/laravel-compat.git",
-                "reference": "8f917875810d1c803f2696c1a1943696c7dc23d0"
+                "reference": "04d195a3a68fad8fc2d4863c4b7e3b5a2865bed0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/dorcas-io/laravel-compat/zipball/8f917875810d1c803f2696c1a1943696c7dc23d0",
-                "reference": "8f917875810d1c803f2696c1a1943696c7dc23d0",
+                "url": "https://api.github.com/repos/dorcas-io/laravel-compat/zipball/04d195a3a68fad8fc2d4863c4b7e3b5a2865bed0",
+                "reference": "04d195a3a68fad8fc2d4863c4b7e3b5a2865bed0",
                 "shasum": ""
             },
             "require": {
-                "dorcas/sdk-php-laravel": "dev-master",
+                "dorcas/sdk-php-laravel": "dev-dev-ola",
                 "illuminate/auth": "^6.0",
                 "illuminate/notifications": "^6.0",
                 "php": "^7.2"
@@ -1112,7 +1112,6 @@
             "require-dev": {
                 "phpunit/phpunit": "^7"
             },
-            "default-branch": true,
             "type": "library",
             "extra": {
                 "laravel": {
@@ -1151,9 +1150,9 @@
             ],
             "support": {
                 "issues": "https://github.com/dorcas-io/laravel-compat/issues",
-                "source": "https://github.com/dorcas-io/laravel-compat/tree/master"
+                "source": "https://github.com/dorcas-io/laravel-compat/tree/dev-ola"
             },
-            "time": "2021-11-15T16:54:33+00:00"
+            "time": "2022-06-16T15:39:48+00:00"
         },
         {
             "name": "dorcas/modules-access-requests",
@@ -2171,16 +2170,16 @@
         },
         {
             "name": "dorcas/sdk-php-laravel",
-            "version": "dev-master",
+            "version": "dev-dev-ola",
             "source": {
                 "type": "git",
                 "url": "https://github.com/dorcas-io/sdk-php-laravel.git",
-                "reference": "78c95ae5a26042564ffd06786ba193fc4a359564"
+                "reference": "33c8e2e6c704494697173bb3c0fd2b26fe197b23"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/dorcas-io/sdk-php-laravel/zipball/78c95ae5a26042564ffd06786ba193fc4a359564",
-                "reference": "78c95ae5a26042564ffd06786ba193fc4a359564",
+                "url": "https://api.github.com/repos/dorcas-io/sdk-php-laravel/zipball/33c8e2e6c704494697173bb3c0fd2b26fe197b23",
+                "reference": "33c8e2e6c704494697173bb3c0fd2b26fe197b23",
                 "shasum": ""
             },
             "require": {
@@ -2191,9 +2190,8 @@
                 "php": ">=7.2"
             },
             "require-dev": {
-                "phpunit/phpunit": "^7"
+                "phpunit/phpunit": "^8.5.5 || ^9.3.5"
             },
-            "default-branch": true,
             "type": "library",
             "autoload": {
                 "files": [
@@ -2226,9 +2224,9 @@
             ],
             "support": {
                 "issues": "https://github.com/dorcas-io/sdk-php-laravel/issues",
-                "source": "https://github.com/dorcas-io/sdk-php-laravel/tree/master"
+                "source": "https://github.com/dorcas-io/sdk-php-laravel/tree/dev-ola"
             },
-            "time": "2021-11-15T16:10:19+00:00"
+            "time": "2022-06-16T15:33:38+00:00"
         },
         {
             "name": "dragonmantank/cron-expression",
@@ -2538,16 +2536,16 @@
         },
         {
             "name": "guzzlehttp/guzzle",
-            "version": "6.5.6",
+            "version": "6.5.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/guzzle/guzzle.git",
-                "reference": "f092dd734083473658de3ee4bef093ed77d2689c"
+                "reference": "724562fa861e21a4071c652c8a159934e4f05592"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/guzzle/guzzle/zipball/f092dd734083473658de3ee4bef093ed77d2689c",
-                "reference": "f092dd734083473658de3ee4bef093ed77d2689c",
+                "url": "https://api.github.com/repos/guzzle/guzzle/zipball/724562fa861e21a4071c652c8a159934e4f05592",
+                "reference": "724562fa861e21a4071c652c8a159934e4f05592",
                 "shasum": ""
             },
             "require": {
@@ -2584,7 +2582,6 @@
                 "MIT"
             ],
             "authors": [
-<<<<<<< HEAD
                 {
                     "name": "Graham Campbell",
                     "email": "hello@gjcampbell.co.uk",
@@ -2616,39 +2613,6 @@
                     "homepage": "https://github.com/sagikazarmark"
                 },
                 {
-=======
-                {
-                    "name": "Graham Campbell",
-                    "email": "hello@gjcampbell.co.uk",
-                    "homepage": "https://github.com/GrahamCampbell"
-                },
-                {
-                    "name": "Michael Dowling",
-                    "email": "mtdowling@gmail.com",
-                    "homepage": "https://github.com/mtdowling"
-                },
-                {
-                    "name": "Jeremy Lindblom",
-                    "email": "jeremeamia@gmail.com",
-                    "homepage": "https://github.com/jeremeamia"
-                },
-                {
-                    "name": "George Mponos",
-                    "email": "gmponos@gmail.com",
-                    "homepage": "https://github.com/gmponos"
-                },
-                {
-                    "name": "Tobias Nyholm",
-                    "email": "tobias.nyholm@gmail.com",
-                    "homepage": "https://github.com/Nyholm"
-                },
-                {
-                    "name": "Márk Sági-Kazár",
-                    "email": "mark.sagikazar@gmail.com",
-                    "homepage": "https://github.com/sagikazarmark"
-                },
-                {
->>>>>>> main
                     "name": "Tobias Schultze",
                     "email": "webmaster@tubo-world.de",
                     "homepage": "https://github.com/Tobion"
@@ -2667,7 +2631,7 @@
             ],
             "support": {
                 "issues": "https://github.com/guzzle/guzzle/issues",
-                "source": "https://github.com/guzzle/guzzle/tree/6.5.6"
+                "source": "https://github.com/guzzle/guzzle/tree/6.5.7"
             },
             "funding": [
                 {
@@ -2683,7 +2647,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2022-05-25T13:19:12+00:00"
+            "time": "2022-06-09T21:36:50+00:00"
         },
         {
             "name": "guzzlehttp/promises",
@@ -4131,16 +4095,16 @@
         },
         {
             "name": "monolog/monolog",
-            "version": "2.6.0",
+            "version": "2.7.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Seldaek/monolog.git",
-                "reference": "247918972acd74356b0a91dfaa5adcaec069b6c0"
+                "reference": "5579edf28aee1190a798bfa5be8bc16c563bd524"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Seldaek/monolog/zipball/247918972acd74356b0a91dfaa5adcaec069b6c0",
-                "reference": "247918972acd74356b0a91dfaa5adcaec069b6c0",
+                "url": "https://api.github.com/repos/Seldaek/monolog/zipball/5579edf28aee1190a798bfa5be8bc16c563bd524",
+                "reference": "5579edf28aee1190a798bfa5be8bc16c563bd524",
                 "shasum": ""
             },
             "require": {
@@ -4219,7 +4183,7 @@
             ],
             "support": {
                 "issues": "https://github.com/Seldaek/monolog/issues",
-                "source": "https://github.com/Seldaek/monolog/tree/2.6.0"
+                "source": "https://github.com/Seldaek/monolog/tree/2.7.0"
             },
             "funding": [
                 {
@@ -4231,7 +4195,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2022-05-10T09:36:00+00:00"
+            "time": "2022-06-09T08:59:12+00:00"
         },
         {
             "name": "moontoast/math",
@@ -6121,6 +6085,7 @@
                     "type": "tidelift"
                 }
             ],
+            "abandoned": "symfony/error-handler",
             "time": "2022-04-12T15:19:55+00:00"
         },
         {
@@ -10413,10 +10378,7 @@
     ],
     "minimum-stability": "stable",
     "stability-flags": {
-        "dorcas/laravel-compat": 20,
-        "dorcas/modules-access-requests": 20,
-        "dorcas/modules-app-store": 20,
-        "dorcas/modules-assistant": 20,
+        "dorcas/sdk-php-laravel": 20,
         "dorcas/modules-auth": 20,
         "dorcas/modules-customers": 20,
         "dorcas/modules-dashboard": 20,
@@ -10433,7 +10395,10 @@
         "dorcas/modules-service-requests": 20,
         "dorcas/modules-settings": 20,
         "dorcas/resellerclub-php": 20,
-        "dorcas/sdk-php-laravel": 20
+        "dorcas/laravel-compat": 20,
+        "dorcas/modules-access-requests": 20,
+        "dorcas/modules-app-store": 20,
+        "dorcas/modules-assistant": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,
