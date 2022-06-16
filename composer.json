@@ -35,7 +35,7 @@
         "dorcas/sdk-php-laravel": "dev-master",
         "fedeisas/laravel-mail-css-inliner": "^2.2",
         "fideloper/proxy": "~4.0",
-        "guzzlehttp/guzzle": "^6.3",
+        "guzzlehttp/guzzle": "^7.4.3",
         "kingflamez/laravelrave": "^1.0",
         "laravel/framework": "^6.0",
         "laravel/helpers": "^1.4",
