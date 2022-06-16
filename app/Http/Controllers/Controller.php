@@ -752,6 +752,7 @@ class Controller extends BaseController
    */
   protected function setViewUiResponse(Request $request = null)
   {
+
     if ($request->session()->has('UiResponse')) {
       $this->data['uiResponse'] = $request->session()->pull('UiResponse');
     } elseif ($request->session()->has('UiToast')) {
