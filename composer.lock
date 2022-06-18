@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "efbc92701ef17a0801f5eb512118a4be",
+    "content-hash": "b32a7a71cff03ad8e9932020ec238fd8",
     "packages": [
         {
             "name": "async-aws/core",
@@ -182,16 +182,16 @@
         },
         {
             "name": "aws/aws-sdk-php",
-            "version": "3.225.5",
+            "version": "3.227.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/aws/aws-sdk-php.git",
-                "reference": "09b404c6b80b9c31be15fa245e647a2f9fb5e733"
+                "reference": "88d803113ade68604ec03c591d65e1e44406ab8e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/09b404c6b80b9c31be15fa245e647a2f9fb5e733",
-                "reference": "09b404c6b80b9c31be15fa245e647a2f9fb5e733",
+                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/88d803113ade68604ec03c591d65e1e44406ab8e",
+                "reference": "88d803113ade68604ec03c591d65e1e44406ab8e",
                 "shasum": ""
             },
             "require": {
@@ -199,9 +199,9 @@
                 "ext-json": "*",
                 "ext-pcre": "*",
                 "ext-simplexml": "*",
-                "guzzlehttp/guzzle": "^5.3.3 || ^6.2.1 || ^7.0",
+                "guzzlehttp/guzzle": "^6.5.7 || ^7.4.4",
                 "guzzlehttp/promises": "^1.4.0",
-                "guzzlehttp/psr7": "^1.7.0 || ^2.1.1",
+                "guzzlehttp/psr7": "^1.8.5 || ^2.3",
                 "mtdowling/jmespath.php": "^2.6",
                 "php": ">=5.5"
             },
@@ -267,9 +267,9 @@
             "support": {
                 "forum": "https://forums.aws.amazon.com/forum.jspa?forumID=80",
                 "issues": "https://github.com/aws/aws-sdk-php/issues",
-                "source": "https://github.com/aws/aws-sdk-php/tree/3.225.5"
+                "source": "https://github.com/aws/aws-sdk-php/tree/3.227.0"
             },
-            "time": "2022-06-15T19:35:13+00:00"
+            "time": "2022-06-17T18:15:06+00:00"
         },
         {
             "name": "barryvdh/laravel-dompdf",
@@ -1092,19 +1092,13 @@
         {
             "name": "dorcas/laravel-compat",
             "version": "dev-dev-ola",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/dorcas-io/laravel-compat.git",
+            "dist": {
+                "type": "path",
+                "url": "/Users/olawuyiayansola/Desktop/dorcas/laravel-compat",
                 "reference": "04d195a3a68fad8fc2d4863c4b7e3b5a2865bed0"
             },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/dorcas-io/laravel-compat/zipball/04d195a3a68fad8fc2d4863c4b7e3b5a2865bed0",
-                "reference": "04d195a3a68fad8fc2d4863c4b7e3b5a2865bed0",
-                "shasum": ""
-            },
             "require": {
-                "dorcas/sdk-php-laravel": "dev-dev-ola",
+                "dorcas/sdk-php-laravel": "dev-master",
                 "illuminate/auth": "^6.0",
                 "illuminate/notifications": "^6.0",
                 "php": "^7.2"
@@ -1125,7 +1119,6 @@
                     "Hostville\\Dorcas\\LaravelCompat\\": "src/"
                 }
             },
-            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -1148,11 +1141,9 @@
                 "laravel",
                 "sdk"
             ],
-            "support": {
-                "issues": "https://github.com/dorcas-io/laravel-compat/issues",
-                "source": "https://github.com/dorcas-io/laravel-compat/tree/dev-ola"
-            },
-            "time": "2022-06-16T15:39:48+00:00"
+            "transport-options": {
+                "relative": false
+            }
         },
         {
             "name": "dorcas/modules-access-requests",
@@ -2170,22 +2161,15 @@
         },
         {
             "name": "dorcas/sdk-php-laravel",
-            "version": "dev-dev-ola",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/dorcas-io/sdk-php-laravel.git",
-                "reference": "33c8e2e6c704494697173bb3c0fd2b26fe197b23"
-            },
+            "version": "dev-master",
             "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/dorcas-io/sdk-php-laravel/zipball/33c8e2e6c704494697173bb3c0fd2b26fe197b23",
-                "reference": "33c8e2e6c704494697173bb3c0fd2b26fe197b23",
-                "shasum": ""
+                "type": "path",
+                "url": "/Users/olawuyiayansola/Desktop/dorcas/sdk-php-laravel",
+                "reference": "29d58881443c6545787a84b53a5762598ddbcf71"
             },
             "require": {
                 "ext-json": "*",
                 "guzzlehttp/guzzle": "^6.3",
-                "illuminate/support": "^6.0",
                 "moneyphp/money": "^3.1",
                 "php": ">=7.2"
             },
@@ -2194,14 +2178,13 @@
             },
             "type": "library",
             "autoload": {
-                "files": [
-                    "src/helpers.php"
-                ],
                 "psr-4": {
                     "Hostville\\Dorcas\\": "src/"
-                }
+                },
+                "files": [
+                    "src/helpers.php"
+                ]
             },
-            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "GPL-3.0-or-later"
             ],
@@ -2222,11 +2205,9 @@
                 "php",
                 "sdk"
             ],
-            "support": {
-                "issues": "https://github.com/dorcas-io/sdk-php-laravel/issues",
-                "source": "https://github.com/dorcas-io/sdk-php-laravel/tree/dev-ola"
-            },
-            "time": "2022-06-16T15:33:38+00:00"
+            "transport-options": {
+                "relative": false
+            }
         },
         {
             "name": "dragonmantank/cron-expression",
@@ -10378,7 +10359,10 @@
     ],
     "minimum-stability": "stable",
     "stability-flags": {
-        "dorcas/sdk-php-laravel": 20,
+        "dorcas/laravel-compat": 20,
+        "dorcas/modules-access-requests": 20,
+        "dorcas/modules-app-store": 20,
+        "dorcas/modules-assistant": 20,
         "dorcas/modules-auth": 20,
         "dorcas/modules-customers": 20,
         "dorcas/modules-dashboard": 20,
@@ -10395,15 +10379,12 @@
         "dorcas/modules-service-requests": 20,
         "dorcas/modules-settings": 20,
         "dorcas/resellerclub-php": 20,
-        "dorcas/laravel-compat": 20,
-        "dorcas/modules-access-requests": 20,
-        "dorcas/modules-app-store": 20,
-        "dorcas/modules-assistant": 20
+        "dorcas/sdk-php-laravel": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
-        "php": "^7.2|^8.0",
+        "php": ">=7.2",
         "ext-json": "*"
     },
     "platform-dev": [],
