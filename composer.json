@@ -33,7 +33,7 @@
         "dorcas/modules-service-profile": "dev-dev-ola",
         "dorcas/modules-service-requests": "dev-dev-ola",
         "dorcas/modules-settings": "dev-dev-ola",
-        "dorcas/resellerclub-php": "dev-dev-ola",
+        "dorcas/resellerclub-php": "dev-master",
         "dorcas/sdk-php-laravel": "dev-dev-ola",
         "fedeisas/laravel-mail-css-inliner": "^4.0",
         "fideloper/proxy": "~4.0",
