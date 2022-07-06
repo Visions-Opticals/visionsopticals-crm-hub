@@ -11,7 +11,7 @@
             "symlink": true
         }],
     "require": {
-        "php": ">=7.2",
+        "php": "^7.2|^8.1.7",
         "ext-json": "*",
         "aws/aws-sdk-php": "^3.52",
         "barryvdh/laravel-dompdf": "^0.8.7",
@@ -39,27 +39,27 @@
         "dorcas/modules-settings": "@dev",
         "dorcas/resellerclub-php": "@dev",
         "dorcas/sdk-php-laravel": "@dev",
-        "fedeisas/laravel-mail-css-inliner": "^2.2",
+        "fedeisas/laravel-mail-css-inliner": "^4.0",
         "fideloper/proxy": "~4.0",
         "guzzlehttp/guzzle": "^6.3",
-        "kingflamez/laravelrave": "^1.0",
-        "laravel/framework": "^6.0",
+        "kingflamez/laravelrave": "^4.2",
+        "laravel/framework": "^8.0",
         "laravel/helpers": "^1.4",
-        "laravel/passport": "^7.5",
-        "laravel/tinker": "~1.0",
-        "lcobucci/jwt": "^3.4",
+        "laravel/passport": "^10.4.1",
+        "laravel/ui": "^3.0",
+        "lcobucci/jwt": "^4.1.4",
         "league/csv": "^9.1",
         "moneyphp/money": "^3.1",
         "moontoast/math": "1.1.2 as 1.99.0",
         "predis/predis": "^1.1",
-        "ramsey/uuid": "^3.7",
+        "ramsey/uuid": "^4.2.2",
         "yabacon/paystack-php": "^2.1"
     },
     "require-dev": {
         "filp/whoops": "~2.0",
         "fzaninotto/faker": "~1.4",
         "mockery/mockery": "~1.0",
-        "phpunit/phpunit": "~7.0"
+        "phpunit/phpunit": "^9.5.10"
     },
     "autoload": {
         "classmap": [
