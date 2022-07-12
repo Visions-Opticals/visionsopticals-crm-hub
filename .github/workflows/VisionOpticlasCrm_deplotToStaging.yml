@@ -95,9 +95,9 @@ jobs:
 
             echo DORCAS_CLIENT_ID=1 >> .env
 
-            echo DORCAS_CLIENT_SECRET=OLdApDYMtxho13xKjqgGc8NFBrwga8nTx6Lrn2mg >> .env
+            echo DORCAS_CLIENT_SECRET=tpTftNZ2AwoAkjEQK1pyr6sTuy62qItfpKGZ3mX7 >> .env
             echo DORCAS_PERSONAL_CLIENT_ID=1 >> .env
-            echo DORCAS_PERSONAL_CLIENT_SECRET=OLdApDYMtxho13xKjqgGc8NFBrwga8nTx6Lrn2mg >> .env
+            echo DORCAS_PERSONAL_CLIENT_SECRET=tpTftNZ2AwoAkjEQK1pyr6sTuy62qItfpKGZ3mX7 >> .env
             echo DORCAS_STORE_PAYMENT_VENDOR_URL="https://dorcas.ravepay.co/auth/" >> .env
 
             echo DORCAS_PARTNER_NAME = "VisionEnhancingOpticals" >> .env
