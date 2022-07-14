@@ -110,6 +110,7 @@ jobs:
             echo "Deployment started ......"
 
 
+            composer dump-autoload
             composer install
 
             php artisan optimize:clear
