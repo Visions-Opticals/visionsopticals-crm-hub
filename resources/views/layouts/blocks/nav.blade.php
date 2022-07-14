@@ -8,6 +8,7 @@
                 @else
                     <img src="{{ $partner->logo }}" alt="materialize logo" style="height: 30px;">
                 @endif
+            
                 <span class="logo-text hide-on-med-and-down">
                     {{ !empty($appUiSettings['product_name']) ? $appUiSettings['product_name'] : 'Hub' }}
                     @if (empty($appUiSettings['product_name']) && !empty($business))
