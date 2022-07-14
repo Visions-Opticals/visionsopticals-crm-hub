@@ -111,7 +111,7 @@ jobs:
 
         
 
-            composer install
+            composer update
 
             php artisan optimize:clear
 
