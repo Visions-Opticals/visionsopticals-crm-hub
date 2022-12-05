@@ -81,7 +81,7 @@ jobs:
 
 
             # Base Dorcas Settings
-            echo DORCAS_EDITION=business >> .env
+            echo DORCAS_EDITION=bussiness >> .env
 
             echo SDK_HOST_PRODUCTION=https://core-crm.visionenhancingsolutions.app >> .env
             echo DEPLOY_ENV=local >> .env
