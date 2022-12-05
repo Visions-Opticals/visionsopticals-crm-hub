@@ -55,7 +55,7 @@ jobs:
 
             INSTALLED_HUB=false
             # Base Laravel Settings
-            echo   INSTALLED_HUB = false >> .env
+            echo   INSTALLED_HUB=false >> .env
             echo   APP_NAME="VisionEnhancingSolutions" >> .env
             echo   APP_ENV=production >> .env
             echo   APP_KEY=base64:MCwov2dPKeHqY28kzhntI3by1Hiie0/jVV7iSMtUrVM= >> .env
@@ -68,9 +68,9 @@ jobs:
 
             echo DB_CONNECTION = mysql >> .env
             echo  DB_PORT=3306 >> .env
-            echo  DB_HOST= ${{secrets.DB_HOST}} >> .env
+            echo  DB_HOST=${{secrets.DB_HOST}} >> .env
             echo DB_DATABASE=${{secrets.DB_NAME}} >> .env
-            echo  DB_USERNAME = ${{secrets.DB_USER}} >> .env
+            echo  DB_USERNAME=${{secrets.DB_USER}} >> .env
             echo  DB_PASSWORD=${{secrets.DB_PASSWORD}} >> .env
 
             echo DB_CORE_HOST=${{secrets.DB_HOST}} >> .env
@@ -100,10 +100,10 @@ jobs:
             echo DORCAS_PERSONAL_CLIENT_SECRET=WKUcHmq8btFT2PRxToKgGfLJRTwAkuJNylwlcQFQ >> .env
             echo DORCAS_STORE_PAYMENT_VENDOR_URL="https://dorcas.ravepay.co/auth/" >> .env
 
-            echo DORCAS_PARTNER_NAME = "VisionEnhancingSolutions" >> .env
-            echo DORCAS_PARTNER_SLUG = "business" >> .env
-            echo DORCAS_PARTNER_LOGO = "https://maghic-app-test-local.s3.us-east-2.amazonaws.com/store-6699f840-0325-11ed-bd8c-aa665a019140/vompany/yNJm2tlxmiPjly1ZWfA58gSARTvD34BTG68m9LWD.png" >> .env
-            echo DORCAS_PARENT_DOMAIN = "crm.visionenhancingsolutions.app" >> .env
+            echo DORCAS_PARTNER_NAME="VisionEnhancingSolutions" >> .env
+            echo DORCAS_PARTNER_SLUG="business" >> .env
+            echo DORCAS_PARTNER_LOGO="https://maghic-app-test-local.s3.us-east-2.amazonaws.com/store-6699f840-0325-11ed-bd8c-aa665a019140/vompany/yNJm2tlxmiPjly1ZWfA58gSARTvD34BTG68m9LWD.png" >> .env
+            echo DORCAS_PARENT_DOMAIN="crm.visionenhancingsolutions.app" >> .env
             
             echo  STOCK_LEVEL_ALERT=5  >> .env
             echo  EXTERNAL_LINK="https://admin.visionenhancingsolutions.app/"  >> .env
