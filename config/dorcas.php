@@ -23,6 +23,7 @@ return [
             'name' => 'rave',
             'display_name' => 'Dorcas Pay',
             'description' => 'Integrate Dorcas Pay in your store to allow your customers checkout by paying online',
+            'includes' => true,
             'configurations' => [
                 ['name' => 'public_key', 'label' => 'Public Key', 'value' => ''],
                 ['name' => 'private_key', 'label' => 'Secret Key', 'value' => ''],
@@ -30,10 +31,25 @@ return [
             'type_integration' => 'keys'
         ],
         [
+            'type' => 'External Process',
+            'image_url' => cdn('/images/integrations/vision-opticals.png'),
+            'name' => 'External Processor',
+            'display_name' => 'Visions Enhancing  Opticals Backend Processor',
+            'description' => 'Integrate CRM to connect with the external backend processor',
+            'includes' => true,
+            'configurations' => [
+                //this token configuration is gotten from the external app we'll like to connect with
+                //only the app can decrypt this value to get the expected result
+                ['name' => 'auth_token',  'token_value' => "eyJpdiI6ImJzcTB6RFpBU3hReWZnNC9YVy9PeFE9PSIsInZhbHVlIjoiSW0vR0RvY012a0N2NkR5emFTeVYzYzl0L3RXVlRRTko4Y3RRUVN1dDhLcz0iLCJtYWMiOiI4NDIwYTA4YjEyNGMxMGNlN2NjNzRkZDZmMjU1MWU1MWYxZTQzMTc5MzZiZDliY2UyNWNhOTdiNzliMWY2NGM5IiwidGFnIjoiIn0= "],
+            ],
+            'type_integration' => 'app_token'
+        ],
+        [
             'type' => 'email',
             'image_url' => cdn('/images/integrations/hubspot.png'),
             'name' => 'hubspot',
             'display_name' => 'Hubspot',
+            'includes' => true,
             'description' => 'Integrate Hubspot to supercharge your Customer Operations',
             'configurations' => [
                 ['name' => 'oauth_url', 'label' => 'OAuth URL', 'value' => config('modules-integrations.config.hubspot.oauth_url',"https://app.hubspot.com/oauth/authorize?scope=contacts%20oauth%20tickets&redirect_uri=".env('APP_URL', 'https://hub.dorcas.io')."/mit/integrations-oauth-callback/dorcas-hubspot&client_id=dfbc9611-be13-4dfb-8ec6-f981c4cf5710")],
