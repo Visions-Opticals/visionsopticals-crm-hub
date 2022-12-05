@@ -90,8 +90,8 @@ jobs:
 
             echo STANDARD_HOST=crm.visionenhancingsolutions.app >> .env
 
-            echo  DORCAS_BASE_URL=https://core-crm.visionenhancingsolutions.app >> .env
-            echo  DORCAS_BASE_DOMAIN=core-crm.visionenhancingsolutions.app >> .env
+            echo DORCAS_BASE_URL=https://core-crm.visionenhancingsolutions.app >> .env
+            echo DORCAS_BASE_DOMAIN=core-crm.visionenhancingsolutions.app >> .env
 
             echo DORCAS_CLIENT_ID=1 >> .env
 
@@ -102,8 +102,11 @@ jobs:
 
             echo DORCAS_PARTNER_NAME = "VisionEnhancingSolutions" >> .env
             echo DORCAS_PARTNER_SLUG = "business" >> .env
-            echo  DORCAS_PARTNER_LOGO = "https://maghic-app-test-local.s3.us-east-2.amazonaws.com/store-6699f840-0325-11ed-bd8c-aa665a019140/vompany/yNJm2tlxmiPjly1ZWfA58gSARTvD34BTG68m9LWD.png" >> .env
-            echo  DORCAS_PARENT_DOMAIN = "crm.visionenhancingsolutions.app" >> .env
+            echo DORCAS_PARTNER_LOGO = "https://maghic-app-test-local.s3.us-east-2.amazonaws.com/store-6699f840-0325-11ed-bd8c-aa665a019140/vompany/yNJm2tlxmiPjly1ZWfA58gSARTvD34BTG68m9LWD.png" >> .env
+            echo DORCAS_PARENT_DOMAIN = "crm.visionenhancingsolutions.app" >> .env
+            
+            echo  STOCK_LEVEL_ALERT=5  >> .env
+            echo  EXTERNAL_LINK="https://admin.visionenhancingsolutions.app/"  >> .env
 
             set -e
 
