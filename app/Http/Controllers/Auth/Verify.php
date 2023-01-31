@@ -21,6 +21,7 @@ class Verify extends Controller
      */
     public function verifyEmail(Request $request, Sdk $sdk, string $id)
     {
+
         if (is_numeric($id)) {
             # bug fix for old links
             $user = User::find($id);

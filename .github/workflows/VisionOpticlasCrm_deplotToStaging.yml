@@ -128,8 +128,5 @@ jobs:
             sudo chmod u=rwx,g=rw,o=rw ${{ secrets.PATH}}/storage/logs/laravel.log
             sudo chmod u=rwx,g=rx,o=x ${{ secrets.PATH }}/artisan
             find "${{ secrets.PATH }}" -type f -name '*.php' -exec chmod 644 {} \;
-            # php artisan migrate --force
-            # php artsian db:seed
-
-
+          
             echo "Deployment finished!"
